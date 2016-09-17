@@ -16,14 +16,14 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Events</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=519376845"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4160090698"/>
-  <link rel="stylesheet" type="text/css" href="css/events.css?crc=3807779310" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4132628846"/>
+  <link rel="stylesheet" type="text/css" href="css/events.css?crc=147205787" id="pagesheet"/>
   <!-- JS includes -->
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
   <![endif]-->
   <script type="text/javascript">
-   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/_QwxLzgc7BY2I83oqpc3IeW9rd1jnaLGIj4JdSPVmljfeCXgfOdoFUJ15QIhFRjkWDBRjAZqFDSuZ2my5QgRZAIhweFqFhJoZAJaF2JXFhwUe8v7OcbUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOebUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOYiaikoqwAiRi2sU5QFzpANU5PoRdeNuZeZkdhoXOco8ifJ4dW4DOAmyicmDJ6ulSKu8jWZ8SkuDjAoDH6GJUitgIMMjgkMfH6GJ6ltgIMIjgkMfP6sFiWF8qMeyxT0rgb.js" type="text/javascript">\x3C/script>');
+   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/1zpqCR6lyvh-GI7cYIuSBiZh2xQzUHYSr2-taBxJ32IfeGGffOdoFUJ15QIhFRjkWDiRw2JaFhsRF2qXjDjhF2SDw2FqjQIX5QFRFQwXwQi8eTCgHKo8jDJlFQJlF2wlwRboOQJUFPouSkuaZWFXOQJ0jhNlSYmXZPoydABEdhoyiaw0jhNlOemRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXCiaiaOcmRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXK2AukOAmyicmDOWFyd1wKfAukSku8jWZ8SkGHfJOpMsMMeMS6MKGHfwWpMsMgeMS6MqGIQWmDZZMgCCzlz69.js" type="text/javascript">\x3C/script>');
 </script>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -56,44 +56,44 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu1244"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u1245"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1252"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u1255" href="events.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u1255" href="events.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
        <div class="SubMenu MenuLevel1 clearfix" id="u1253"><!-- vertical box -->
         <ul class="SubMenuView clearfix colelem" id="u1254"><!-- vertical box -->
-         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
-         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
         </ul>
        </div>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1290"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact-us.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact Us</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1311"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1332"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1353"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
       </div>
      </nav>
     </div>
     <div class="clearfix colelem" id="pmenuu1884"><!-- group -->
      <nav class="MenuBar clearfix grpelem" id="menuu1884"><!-- vertical box -->
       <div class="MenuItemContainer clearfix colelem" id="u1892"><!-- horizontal box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1895" href="dinner.html"><!-- horizontal box --><div class="MenuItemLabel clearfix grpelem" id="u1896-4"><!-- content --><p><span id="u1896">Dinner</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1895" href="dinner.php"><!-- horizontal box --><div class="MenuItemLabel clearfix grpelem" id="u1896-4"><!-- content --><p><span id="u1896">Dinner</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix colelem" id="u2055"><!-- horizontal box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u2056" href="show.html"><!-- horizontal box --><div class="MenuItemLabel clearfix grpelem" id="u2059-4"><!-- content --><p><span id="u2059">Show</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u2056" href="show.php"><!-- horizontal box --><div class="MenuItemLabel clearfix grpelem" id="u2059-4"><!-- content --><p><span id="u2059">Show</span></p></div></a>
       </div>
      </nav>
      <ul class="AccordionWidget clearfix grpelem" id="accordionu2076"><!-- vertical box -->
       <li class="AccordionPanel clearfix colelem" id="u2077"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u2080-4"><!-- content --><p><span id="u2080">Our Events</span></p></div><div class="AccordionPanelContent clearfix colelem" id="u2078"><!-- group --><div class="clearfix grpelem" id="u2079-7"><!-- content --><p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p><p>&nbsp;</p><p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p></div><div class="grpelem" id="u2165"><!-- content --></div></div></li>
-      <li class="AccordionPanel clearfix colelem" id="u2085"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u2088-4"><!-- content --><p>Dinner</p></div><div class="AccordionPanelContent disn clearfix colelem" id="u2086"><!-- group --><div class="clearfix grpelem" id="u2087-6"><!-- content --><p>Sed velit congue viverra. Sed porta mattis luctus. Curabitur feugiat pharetra sem eu iaculis. Phasellus venenatis volutpat arcu id placerat. Aliquam fringilla ligula eu purus lacinia at volutpat nunc malesuada. Nunc a augue ac orci tempus commodo. <a class="nonblock" href="dinner.html">Click Here</a></p></div><div class="grpelem" id="u2168"><!-- content --></div></div></li>
-      <li class="AccordionPanel clearfix colelem" id="u2081"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u2082-4"><!-- content --><p>Show</p></div><div class="AccordionPanelContent disn clearfix colelem" id="u2083"><!-- group --><div class="clearfix grpelem" id="u2084-6"><!-- content --><p>Tortor, eget ornare urna. Duis varius tellus eros. Donec odio arcu, rutrum ac rutrum eget, bibendum ac enim. Phasellus hendrerit iaculis purus. Aliquam sit amet molestie odio. Sed commodo dictum consequat aenean in est. Donec odio arcu, rutrum. <a class="nonblock" href="show.html">Click Here</a></p></div><div class="grpelem" id="u2171"><!-- content --></div></div></li>
+      <li class="AccordionPanel clearfix colelem" id="u2085"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u2088-4"><!-- content --><p>Dinner</p></div><div class="AccordionPanelContent disn clearfix colelem" id="u2086"><!-- group --><div class="clearfix grpelem" id="u2087-6"><!-- content --><p>Sed velit congue viverra. Sed porta mattis luctus. Curabitur feugiat pharetra sem eu iaculis. Phasellus venenatis volutpat arcu id placerat. Aliquam fringilla ligula eu purus lacinia at volutpat nunc malesuada. Nunc a augue ac orci tempus commodo. <a class="nonblock" href="dinner.php">Click Here</a></p></div><div class="grpelem" id="u2168"><!-- content --></div></div></li>
+      <li class="AccordionPanel clearfix colelem" id="u2081"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u2082-4"><!-- content --><p>Show</p></div><div class="AccordionPanelContent disn clearfix colelem" id="u2083"><!-- group --><div class="clearfix grpelem" id="u2084-6"><!-- content --><p>Tortor, eget ornare urna. Duis varius tellus eros. Donec odio arcu, rutrum ac rutrum eget, bibendum ac enim. Phasellus hendrerit iaculis purus. Aliquam sit amet molestie odio. Sed commodo dictum consequat aenean in est. Donec odio arcu, rutrum. <a class="nonblock" href="show.php">Click Here</a></p></div><div class="grpelem" id="u2171"><!-- content --></div></div></li>
      </ul>
     </div>
     <div class="verticalspacer" data-offset-top="498" data-content-above-spacer="578" data-content-below-spacer="125"></div>

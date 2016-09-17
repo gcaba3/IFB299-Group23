@@ -16,14 +16,14 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Volunteering</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=519376845"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4160090698"/>
-  <link rel="stylesheet" type="text/css" href="css/volunteering.css?crc=315477880" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4132628846"/>
+  <link rel="stylesheet" type="text/css" href="css/volunteering.css?crc=80048005" id="pagesheet"/>
   <!-- JS includes -->
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
   <![endif]-->
   <script type="text/javascript">
-   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/GJ_9-Vr3rNv-1LBmPf7kUDRR6Ac1GYvgAz2RL3xlLGMfenjgfOdoFUJ15QIhFRjkWDBRjAZqFDSuZ2my5QgRZAIhweFqFhJoZAJaF2JXFhwUe8v7OcbUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOebUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOYiaikoqwAiRi2sU5QFzpANU5PoRdeNuZeZkdhoXOco8ifJFdWJlZABhZWwlShB0SkGHfJOpMsMMeMS6MqGIQWmDZZMgTzEdz69.js" type="text/javascript">\x3C/script>');
+   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/obvNpZLVNqalfeN4ykOPzRitQEY-mVI1QuVtrXacRnIfezwgfOdoFUJ15QIhFRjkWDiRw2JaFhsRF2qXjDjhF2SDw2FqjQIX5QFRFQwXwQi8eTCgHKo8jDJlFQJlF2wlwRboOQJUFPouSkuaZWFXOQJ0jhNlSYmXZPoydABEdhoyiaw0jhNlOemRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXCiaiaOcmRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXK2AukOAmyicmDOWFyd1w7f6Kfa6IbMg6YJM4HgIuuShAbMddO_dtB.js" type="text/javascript">\x3C/script>');
 </script>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -56,28 +56,28 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu1244"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u1245"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1252"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
        <div class="SubMenu MenuLevel1 clearfix" id="u1253"><!-- vertical box -->
         <ul class="SubMenuView clearfix colelem" id="u1254"><!-- vertical box -->
-         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
-         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
         </ul>
        </div>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1290"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact-us.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact Us</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1311"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1332"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1353"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
       </div>
      </nav>
     </div>

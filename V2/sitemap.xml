@@ -1,116 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/index.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/index.php</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/show.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/show.php</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/user-account.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/user-account.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/volunteering.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/volunteering.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/blank-event.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/blank-event.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/contact-us.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/contact.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/login.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/login.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/events.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/events.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/dinner.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/dinner.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/donations.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/donations.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/donate.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/donate.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/blank-database-form.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/blank-database-form.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/admin-account.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/admin-account.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/faq.html</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/faq.html</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/images/istock_000022123478_medium.jpg</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/images/istock_000022123478_medium.jpg</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/images/logo.png</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/images/logo.png</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/images/adds1.jpg</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/images/adds1.jpg</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/images/adds3.jpg</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/images/adds3.jpg</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://d1gct4q93oyoq9.cloudfront.net/images/adds2.jpg</loc>
-    <lastmod>2016-09-01</lastmod>
+    <loc>http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/images/adds2.jpg</loc>
+    <lastmod>2016-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

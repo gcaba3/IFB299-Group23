@@ -10,26 +10,34 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "index.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "show.css"], "outOfDate":[]};
 </script>
   
-  <title>Home</title>
+  <title>Show</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=519376845"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4160090698"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=378317307" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4132628846"/>
+  <link rel="stylesheet" type="text/css" href="css/show.css?crc=471825010" id="pagesheet"/>
   <!-- JS includes -->
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
   <![endif]-->
   <script type="text/javascript">
-   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/UX4IDLUJJJyzr06Ydh0EqmRlAxttdyIjkafey4ZVE1XfelqgfOdoFUJ15QIhFRjkWDBRjAZqFDSuZ2my5QgRZAIhweFqFhJoZAJaF2JXFhwUe8v7OcbUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOebUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOYiaikoqwAiRi2sU5QFzpANU5PoRdeNuZeZkdhoXOco8ifJ4dW4DOAmyicmDJ6ulSKu8jWZ8SkuDjAoDH6GJUitgIMMjgkMfH6GJ6ltgIMIjgkMfH6GJ6itgIMIjgfMfP6sFiWF8qMeLxT0rgb.js" type="text/javascript">\x3C/script>');
+   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/oLIzfhR2kJvD5T-vkiXOfuxKFYUDUp566wyqf80MNfvfeGGffOdoFUJ15QIhFRjkWDiRw2JaFhsRF2qXjDjhF2SDw2FqjQIX5QFRFQwXwQi8eTCgHKo8jDJlFQJlF2wlwRboOQJUFPouSkuaZWFXOQJ0jhNlSYmXZPoydABEdhoyiaw0jhNlOemRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXCiaiaOcmRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXK2AukOAmyicmDOWFyd1wKfAukSku8jWZ8SkGHfJOpMsMMeMS6MKGHfwWpMsMgeMS6MqGIQWmDZZMglwzlz69.js" type="text/javascript">\x3C/script>');
 </script>
   <!-- Other scripts -->
   <script type="text/javascript">
    try {Typekit.load();} catch(e) {}
 </script>
-   </head>
+    <!--HTML Widget code-->
+  
+<style>
+	.fb-comments, .fb-comments * {
+		width:100% !important;
+	}
+</style>
+
+ </head>
  <body class="museBGSize">
 
   <!--HTML Widget code-->
@@ -48,27 +56,27 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   
   <div class="shadow rounded-corners clearfix" id="page"><!-- column -->
    <div class="position_content" id="page_position_content">
-    <div class="gradient rounded-corners clearfix colelem" id="u107"><!-- group -->
-     <div class="shadow rounded-corners clearfix grpelem" id="u110"><!-- group -->
+    <div class="clearfix colelem" id="u107"><!-- group -->
+     <div class="clearfix grpelem" id="u110"><!-- group -->
       <div class="clip_frame grpelem" id="u113"><!-- image -->
        <img class="block" id="u113_img" src="images/logo.png?crc=4180727026" alt="" width="191" height="140"/>
       </div>
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu1244"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u1245"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u1248" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1252"><!-- vertical box -->
        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
        <div class="SubMenu MenuLevel1 clearfix" id="u1253"><!-- vertical box -->
         <ul class="SubMenuView clearfix colelem" id="u1254"><!-- vertical box -->
          <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
-         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix grpelem" id="u1396" href="show.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
         </ul>
        </div>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1290"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact-us.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact Us</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1311"><!-- vertical box -->
        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
@@ -81,40 +89,65 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       </div>
      </nav>
     </div>
-    <div class="clearfix colelem" id="pu141-20"><!-- group -->
-     <div class="clearfix grpelem" id="u141-20"><!-- content -->
-      <h2 id="u141-2"><span class="actAsDiv normal_text" id="u149"><!-- content --><span class="actAsDiv" id="u147"><!-- simple frame --></span></span><span id="u141">Who Are We?</span></h2>
-      <p id="u141-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel velit vel massa feugiat posuere. Duis aliquet sem massa, nec lobortis nunc volutpat nec. Praesent ultricies posuere laoreet. Sed a neque lorem. Phasellus a urna nec dolor auctor finibus. Nulla in dignissim nisl. Etiam vulputate massa vitae mi pellentesque, sed venenatis mauris laoreet. Mauris feugiat vel ante quis iaculis. Quisque elementum libero a mauris malesuada dapibus.</p>
-      <p id="u141-5">&nbsp;</p>
-      <p id="u141-7">Praesent scelerisque at felis ut venenatis. Praesent ac bibendum nisl. Sed convallis sagittis urna, at porttitor ex volutpat eu. Proin nunc orci, vestibulum ut libero vitae, fermentum finibus lacus. Phasellus tristique ornare nisl in blandit. Morbi lobortis cursus mollis. Donec vel mauris ullamcorper sapien tristique pulvinar eget sit amet risus. Vivamus mollis est vitae sapien cursus ornare. Etiam sodales sollicitudin sapien at dictum. Pellentesque nec magna ut leo varius auctor at sit amet erat. Sed at felis semper dui scelerisque egestas in interdum dui. Ut vel ullamcorper augue.</p>
-      <p id="u141-8">&nbsp;</p>
-      <p id="u141-10">Nam et urna egestas mi tempus laoreet ac ac magna. Nunc consequat, dolor eget lobortis vehicula, risus purus eleifend tellus, consequat condimentum tellus purus nec sapien. Sed et aliquet leo, vel egestas metus. Aliquam ac aliquam libero, nec fermentum leo. Vestibulum ut massa ante. Ut ullamcorper nunc mi, quis tincidunt sem rhoncus non. Ut et hendrerit nisl.</p>
-      <p id="u141-11">&nbsp;</p>
-      <p id="u141-13">Praesent vel porttitor risus. Curabitur non velit suscipit, ornare justo bibendum, lacinia nisl. Nam eleifend mi ut nisl vestibulum posuere. Curabitur facilisis est imperdiet dui lacinia viverra. Etiam nec risus erat. Suspendisse fringilla in leo vel dictum. Etiam sit amet neque tempus, lacinia justo quis, molestie ante. Morbi et nisi ligula. Praesent iaculis justo quis magna pharetra posuere. In nec fringilla erat. Vivamus bibendum vitae nulla eleifend finibus. Vivamus consectetur tempus arcu vel tincidunt. Nunc pharetra malesuada ullamcorper. Donec ac dolor in felis pulvinar pellentesque.</p>
-      <p id="u141-14">&nbsp;</p>
-      <p id="u141-16">Donec posuere justo tincidunt convallis vulputate. Mauris ac lorem tristique, cursus purus ac, aliquam sem. Morbi ultrices quis erat ut pellentesque. Nunc purus est, ultricies id tristique sed, tempor in tortor. Cras at mauris eu orci egestas molestie. Pellentesque non pretium magna, a imperdiet mi. Donec erat tellus, lobortis eu ex eget, volutpat tincidunt arcu. Vestibulum posuere at enim non fringilla. Maecenas id congue lacus. Mauris laoreet ornare orci sit amet elementum. Morbi commodo suscipit nisi ut consectetur.</p>
-      <p id="u141-17">&nbsp;</p>
-      <p id="u141-18">&nbsp;</p>
-     </div>
-     <div class="clearfix grpelem" id="u184"><!-- group -->
-      <div class="rounded-corners clip_frame grpelem" id="u156"><!-- image -->
-       <img class="block" id="u156_img" src="images/istock_000022123478_medium.jpg?crc=4233723034" alt="" width="368" height="281"/>
-      </div>
-      <div class="rounded-corners clearfix grpelem" id="u153"><!-- group -->
-       <div class="rgba-background rounded-corners clearfix grpelem" id="u181"><!-- group -->
-        <div class="clearfix grpelem" id="u172-6"><!-- content -->
-         <p>A Organization</p>
-         <p>In YOUR Community</p>
-        </div>
+    <div class="SlideShowWidget clearfix colelem" id="slideshowu2782"><!-- none box -->
+     <div class="popup_anchor" id="u2786popup">
+      <div class="SlideShowContentPanel clearfix" id="u2786"><!-- stack box -->
+       <div class="SSSlide clip_frame clearfix grpelem" id="u2787"><!-- image -->
+        <img class="ImageInclude position_content" id="u2787_img" data-src="images/adds1.jpg?crc=3802105904" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
+       </div>
+       <div class="SSSlide invi clip_frame clearfix grpelem" id="u2791"><!-- image -->
+        <img class="ImageInclude position_content" id="u2791_img" data-src="images/adds2.jpg?crc=4177812691" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
+       </div>
+       <div class="SSSlide invi clip_frame clearfix grpelem" id="u2789"><!-- image -->
+        <img class="ImageInclude position_content" id="u2789_img" data-src="images/adds3.jpg?crc=530956457" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
        </div>
       </div>
      </div>
-     <div class="grpelem" id="u1434"><!-- custom html -->
-      <a class="twitter-timeline" href="https://twitter.com/Org_Community?/timelines/539487832448843776">v</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     <div class="popup_anchor" id="u2794-4popup">
+      <div class="SSPreviousButton clearfix" id="u2794-4"><!-- content -->
+       <p><span id="u2794">&lt;</span></p>
+      </div>
+     </div>
+     <div class="popup_anchor" id="u2806-4popup">
+      <div class="SSNextButton clearfix" id="u2806-4"><!-- content -->
+       <p>&gt;</p>
+      </div>
      </div>
     </div>
-    <div class="verticalspacer" data-offset-top="850" data-content-above-spacer="930" data-content-below-spacer="125"></div>
-    <div class="gradient colelem" id="u126"><!-- simple frame --></div>
+    <div class="clearfix colelem" id="ppu2808-15"><!-- group -->
+     <div class="clearfix grpelem" id="pu2808-15"><!-- column -->
+      <div class="clearfix colelem" id="u2808-15"><!-- content -->
+       <p>Show</p>
+       <p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p>
+       <p>&nbsp;</p>
+       <p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p>
+       <p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p>
+       <p>&nbsp;</p>
+       <p><a class="nonblock" href="https://www.facebook.com/events/134929133624382/">RSVP on Event Page</a></p>
+      </div>
+      <div class="Button rounded-corners clearfix colelem" id="buttonu2810"><!-- container box -->
+       <div class="clearfix grpelem" id="u2811-4"><!-- content -->
+        <p>Buy</p>
+       </div>
+       <div class="rounded-corners grpelem" id="u2812"><!-- simple frame --></div>
+      </div>
+      <div class="size_fixed colelem" id="u2813"><!-- custom html -->
+       
+<div class="fb-comments" data-href="https://www.facebook.com/CommunityOrganisation/posts/1039874776097941" data-mobile="false" data-width="100%" data-colorscheme="light" data-action="comment" data-num-posts="5" data-order_by="reverse_time"></div>
+
+      </div>
+     </div>
+     <div class="size_fixed grpelem" id="u2809"><!-- custom html -->
+      
+<iframe class="actAsDiv" style="width:100%;height:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;q=QUT%20Gradens%20Point&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
+
+     </div>
+     <div class="grpelem" id="u2814"><!-- custom html -->
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCommunityOrganisation%2Fposts%2F1039874776097941&width=400" width="400" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+     </div>
+    </div>
+    <div class="verticalspacer" data-offset-top="1516" data-content-above-spacer="1595" data-content-below-spacer="125"></div>
+    <div class="colelem" id="u126"><!-- simple frame --></div>
     <div class="clearfix colelem" id="pu2664-3"><!-- group -->
      <div class="clearfix grpelem" id="u2664-3"><!-- content -->
       <p>&nbsp;</p>
@@ -148,12 +181,13 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 16);return 0},g=function(g){for(var f=document.getElementsByTagName("link"),i=0;i<f.length;i++)if("text/css"==f[i].type){var h=(f[i].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!h||!h[1]||!h[2])break;b[h[1]]=h[2]}f=document.createElement("div");f.className="version";f.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(f);for(i=0;i<Muse.assets.required.length;){var h=Muse.assets.required[i],l=h.match(/([\w\-\.]+)\.(\w+)$/),k=l&&l[1]?
 l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(i,1),"undefined"!=typeof b[h]&&(k!=b[h]>>>24||l!=(b[h]&16777215))&&Muse.assets.outOfDate.push(h)):i++;f.className="version";break;case "js":k.match(/^jquery-[\d\.]+/gi)&&d&&d().jquery=="1.8.3"?Muse.assets.required.splice(i,1):i++;break;default:throw Error("Unsupported file type: "+
 l);}}f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?setTimeout(function(){g(!0)},5E3):g()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musemenu","jquery.musepolyfill.bgsize","jquery.watch"],function(d){var $ = d;$(document).ready(function(){try{
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musemenu","webpro","musewpslideshow","jquery.museoverlay","touchswipe","jquery.musepolyfill.bgsize","jquery.watch"],function(d){var $ = d;$(document).ready(function(){try{
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
 Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+Muse.Utils.initWidget('#slideshowu2782', ['#bp_infinity'], function(elem) { var widget = new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'off',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false}); $(elem).data('widget', widget); return widget; });/* #slideshowu2782 */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};

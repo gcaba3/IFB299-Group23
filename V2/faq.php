@@ -10,20 +10,20 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "admin-account.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "faq.css"], "outOfDate":[]};
 </script>
   
-  <title>Admin Account</title>
+  <title>FAQ</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=519376845"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4160090698"/>
-  <link rel="stylesheet" type="text/css" href="css/admin-account.css?crc=315477880" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4132628846"/>
+  <link rel="stylesheet" type="text/css" href="css/faq.css?crc=4268844657" id="pagesheet"/>
   <!-- JS includes -->
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
   <![endif]-->
   <script type="text/javascript">
-   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/ajWbwITbttlJvPSs5ddUOQrxNIan9gzUJ58lX7aod9qfenjgfOdoFUJ15QIhFRjkWDBRjAZqFDSuZ2my5QgRZAIhweFqFhJoZAJaF2JXFhwUe8v7OcbUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOebUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOYiaikoqwAiRi2sU5QFzpANU5PoRdeNuZeZkdhoXOco8ifJFdWJlZABhZWwlShB0SkGHfJOpMsMMeMS6MqGIQWmDZZMg7VEdz69.js" type="text/javascript">\x3C/script>');
+   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/4RcRksh49WXrxO0cSjDnp3JIZfeB2N3OIS2CoZ43h5XfeTjffOdoFUJ15QIhFRjkWDiRw2JaFhsRF2qXjDjhF2SDw2FqjQIX5QFRFQwXwQi8eTCgHKo8jDJlFQJlF2wlwRboOQJUFPouSkuaZWFXOQJ0jhNlSYmXZPoydABEdhoyiaw0jhNlOemRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXCiaiaOcmRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXK2AukOAmyicmDOWFyd1wKfAukSku8jWZ8SkGHfJOpMsMMeMS6MKGHfJYpMsMMeMb6MKGHfwWpMsMgeMS6MqGIQWmDZZMg0Czlz69.js" type="text/javascript">\x3C/script>');
 </script>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -56,32 +56,56 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu1244"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u1245"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1252"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
        <div class="SubMenu MenuLevel1 clearfix" id="u1253"><!-- vertical box -->
         <ul class="SubMenuView clearfix colelem" id="u1254"><!-- vertical box -->
-         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
-         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
         </ul>
        </div>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1290"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact-us.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact Us</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1311"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u1312" href="faq.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1332"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1353"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
       </div>
      </nav>
     </div>
-    <div class="verticalspacer" data-offset-top="0" data-content-above-spacer="229" data-content-below-spacer="463"></div>
+    <div class="clearfix colelem" id="u2903-34"><!-- content -->
+     <h2 id="u2903-2"><span class="actAsDiv normal_text" id="u2904"><!-- content --><span class="actAsDiv" id="u2905"><!-- simple frame --></span></span><span id="u2903">FAQ?</span></h2>
+     <p id="u2903-3">&nbsp;</p>
+     <p id="u2903-4">&nbsp;</p>
+     <p id="u2903-6">1.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     <p id="u2903-7">&nbsp;</p>
+     <p id="u2903-9">&nbsp;Maecenas vel velit vel massa feugiat posuere. Duis aliquet sem massa, nec lobortis nunc volutpat nec. Praesent ultricies posuere laoreet. Sed a neque lorem. Phasellus a urna nec dolor auctor finibus. Nulla in dignissim nisl. Etiam vulputate massa vitae mi pellentesque, sed venenatis mauris laoreet. Mauris feugiat vel ante quis iaculis. Quisque elementum libero a mauris malesuada dapibus.</p>
+     <p id="u2903-10">&nbsp;</p>
+     <p id="u2903-12">2. Praesent scelerisque at felis ut venenatis. Praesent ac bibendum nisl. Sed convallis sagittis urna.</p>
+     <p id="u2903-13">&nbsp;</p>
+     <p id="u2903-15">At porttitor ex volutpat eu. Proin nunc orci, vestibulum ut libero vitae, fermentum finibus lacus. Phasellus tristique ornare nisl in blandit. Morbi lobortis cursus mollis. Donec vel mauris ullamcorper sapien tristique pulvinar eget sit amet risus. Vivamus mollis est vitae sapien cursus ornare. Etiam sodales sollicitudin sapien at dictum. Pellentesque nec magna ut leo varius auctor at sit amet erat. Sed at felis semper dui scelerisque egestas in interdum dui. Ut vel ullamcorper augue.</p>
+     <p id="u2903-16">&nbsp;</p>
+     <p id="u2903-18">3. Nam et urna egestas mi tempus laoreet ac ac magna. Nunc consequat.</p>
+     <p id="u2903-19">&nbsp;</p>
+     <p id="u2903-21">Dolor eget lobortis vehicula, risus purus eleifend tellus, consequat condimentum tellus purus nec sapien. Sed et aliquet leo, vel egestas metus. Aliquam ac aliquam libero, nec fermentum leo. Vestibulum ut massa ante. Ut ullamcorper nunc mi, quis tincidunt sem rhoncus non. Ut et hendrerit nisl.</p>
+     <p id="u2903-22">&nbsp;</p>
+     <p id="u2903-24">4. Praesent vel porttitor risus. Curabitur non velit suscipit, ornare justo bibendum, lacinia nisl.</p>
+     <p id="u2903-25">&nbsp;</p>
+     <p id="u2903-27">Nam eleifend mi ut nisl vestibulum posuere. Curabitur facilisis est imperdiet dui lacinia viverra. Etiam nec risus erat. Suspendisse fringilla in leo vel dictum. Etiam sit amet neque tempus, lacinia justo quis, molestie ante. Morbi et nisi ligula. Praesent iaculis justo quis magna pharetra posuere. In nec fringilla erat. Vivamus bibendum vitae nulla eleifend finibus. Vivamus consectetur tempus arcu vel tincidunt. Nunc pharetra malesuada ullamcorper. Donec ac dolor in felis pulvinar pellentesque.</p>
+     <p id="u2903-28">&nbsp;</p>
+     <p id="u2903-30">Donec posuere justo tincidunt convallis vulputate. Mauris ac lorem tristique, cursus purus ac, aliquam sem. Morbi ultrices quis erat ut pellentesque. Nunc purus est, ultricies id tristique sed, tempor in tortor. Cras at mauris eu orci egestas molestie. Pellentesque non pretium magna, a imperdiet mi. Donec erat tellus, lobortis eu ex eget, volutpat tincidunt arcu. Vestibulum posuere at enim non fringilla. Maecenas id congue lacus. Mauris laoreet ornare orci sit amet elementum. Morbi commodo suscipit nisi ut consectetur.</p>
+     <p id="u2903-31">&nbsp;</p>
+     <p id="u2903-32">&nbsp;</p>
+    </div>
+    <div class="verticalspacer" data-offset-top="846" data-content-above-spacer="926" data-content-below-spacer="125"></div>
     <div class="colelem" id="u126"><!-- simple frame --></div>
     <div class="clearfix colelem" id="pu2664-3"><!-- group -->
      <div class="clearfix grpelem" id="u2664-3"><!-- content -->

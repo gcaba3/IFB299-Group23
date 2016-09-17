@@ -10,20 +10,20 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "show.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "dinner.css"], "outOfDate":[]};
 </script>
   
-  <title>Show</title>
+  <title>Dinner</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=519376845"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4160090698"/>
-  <link rel="stylesheet" type="text/css" href="css/show.css?crc=4195244556" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=4132628846"/>
+  <link rel="stylesheet" type="text/css" href="css/dinner.css?crc=4183575843" id="pagesheet"/>
   <!-- JS includes -->
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
   <![endif]-->
   <script type="text/javascript">
-   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/XSyxs88vkeP6fUmsAG388bQpTvqBNtmZ8cJ-lbyTyBbfeCXgfOdoFUJ15QIhFRjkWDBRjAZqFDSuZ2my5QgRZAIhweFqFhJoZAJaF2JXFhwUe8v7OcbUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOebUZhFXFYIowhNodaIoOcFCdamqZ14zd1b0dcmXOYiaikoqwAiRi2sU5QFzpANU5PoRdeNuZeZkdhoXOco8ifJ4dW4DOAmyicmDJ6ulSKu8jWZ8SkuDjAoDH6GJUitgIMMjgkMfH6GJ6ltgIMIjgkMfP6sFiWF8qMeRxT0rgb.js" type="text/javascript">\x3C/script>');
+   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//use.typekit.net/ik/kiFAq9jjNg-KMxL258ssbO9TSr2TATFBlsuf0t9_n3MfeGGffOdoFUJ15QIhFRjkWDiRw2JaFhsRF2qXjDjhF2SDw2FqjQIX5QFRFQwXwQi8eTCgHKo8jDJlFQJlF2wlwRboOQJUFPouSkuaZWFXOQJ0jhNlSYmXZPoydABEdhoyiaw0jhNlOemRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXCiaiaOcmRwKXuwKXXwkXkF2qlwRIuO1mDOWi8SablwKoRdhu3iWs8OcBljWTzdcBaSkoRdhXK2AukOAmyicmDOWFyd1wKfAukSku8jWZ8SkGHfJOpMsMMeMS6MKGHfwWpMsMgeMS6MqGIQWmDZZMgCvzlz69.js" type="text/javascript">\x3C/script>');
 </script>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -64,60 +64,60 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      </div>
      <nav class="MenuBar clearfix grpelem" id="menuu1244"><!-- horizontal box -->
       <div class="MenuItemContainer clearfix grpelem" id="u1245"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1248" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1249-4"><!-- content --><p><span id="u1249">Home</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1252"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1255" href="events.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1258-4"><!-- content --><p><span id="u1258">Events</span></p></div><div class="grpelem" id="u1256"><!-- content --></div></a>
        <div class="SubMenu MenuLevel1 clearfix" id="u1253"><!-- vertical box -->
         <ul class="SubMenuView clearfix colelem" id="u1254"><!-- vertical box -->
-         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1376" href="dinner.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
-         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix grpelem" id="u1396" href="show.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1374"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix grpelem" id="u1376" href="dinner.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1380-4"><!-- content --><p>Dinner</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u1395"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u1396" href="show.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1398-4"><!-- content --><p>Show</p></div></a></li>
         </ul>
        </div>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1290"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact-us.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact Us</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1311"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1332"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1333" href="donate.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1353"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1356" href="login.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1359-4"><!-- content --><p><span id="u1359">Login</span></p></div></a>
       </div>
      </nav>
     </div>
-    <div class="SlideShowWidget clearfix colelem" id="slideshowu2782"><!-- none box -->
-     <div class="popup_anchor" id="u2786popup">
-      <div class="SlideShowContentPanel clearfix" id="u2786"><!-- stack box -->
-       <div class="SSSlide clip_frame clearfix grpelem" id="u2787"><!-- image -->
-        <img class="ImageInclude position_content" id="u2787_img" data-src="images/adds1.jpg?crc=3802105904" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
+    <div class="SlideShowWidget clearfix colelem" id="slideshowu2174"><!-- none box -->
+     <div class="popup_anchor" id="u2175popup">
+      <div class="SlideShowContentPanel clearfix" id="u2175"><!-- stack box -->
+       <div class="SSSlide clip_frame clearfix grpelem" id="u2180"><!-- image -->
+        <img class="ImageInclude position_content" id="u2180_img" data-src="images/adds1.jpg?crc=3802105904" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
        </div>
-       <div class="SSSlide invi clip_frame clearfix grpelem" id="u2791"><!-- image -->
-        <img class="ImageInclude position_content" id="u2791_img" data-src="images/adds2.jpg?crc=4177812691" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
+       <div class="SSSlide invi clip_frame clearfix grpelem" id="u2293"><!-- image -->
+        <img class="ImageInclude position_content" id="u2293_img" data-src="images/adds2.jpg?crc=4177812691" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
        </div>
-       <div class="SSSlide invi clip_frame clearfix grpelem" id="u2789"><!-- image -->
-        <img class="ImageInclude position_content" id="u2789_img" data-src="images/adds3.jpg?crc=530956457" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
+       <div class="SSSlide invi clip_frame clearfix grpelem" id="u2313"><!-- image -->
+        <img class="ImageInclude position_content" id="u2313_img" data-src="images/adds3.jpg?crc=530956457" src="images/blank.gif?crc=4208392903" alt="" data-width="106" data-height="332"/>
        </div>
       </div>
      </div>
-     <div class="popup_anchor" id="u2794-4popup">
-      <div class="SSPreviousButton clearfix" id="u2794-4"><!-- content -->
-       <p><span id="u2794">&lt;</span></p>
+     <div class="popup_anchor" id="u2198-4popup">
+      <div class="SSPreviousButton clearfix" id="u2198-4"><!-- content -->
+       <p><span id="u2198">&lt;</span></p>
       </div>
      </div>
-     <div class="popup_anchor" id="u2806-4popup">
-      <div class="SSNextButton clearfix" id="u2806-4"><!-- content -->
+     <div class="popup_anchor" id="u2197-4popup">
+      <div class="SSNextButton clearfix" id="u2197-4"><!-- content -->
        <p>&gt;</p>
       </div>
      </div>
     </div>
-    <div class="clearfix colelem" id="ppu2808-15"><!-- group -->
-     <div class="clearfix grpelem" id="pu2808-15"><!-- column -->
-      <div class="clearfix colelem" id="u2808-15"><!-- content -->
-       <p>Show</p>
+    <div class="clearfix colelem" id="ppu2333-15"><!-- group -->
+     <div class="clearfix grpelem" id="pu2333-15"><!-- column -->
+      <div class="clearfix colelem" id="u2333-15"><!-- content -->
+       <p>Dinner</p>
        <p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p>
        <p>&nbsp;</p>
        <p>Dolor sit amet, consectetur adipiscing elit. Aliquam vitae fringilla augue. Maecenas in lectus lorem. In et accumsan mi. Aenean vestibulum nisl eu arcu viverra iaculis. In hac habitasse platea dictumst. In vehicula diam et mauris imperdiet aliquet.</p>
@@ -125,28 +125,28 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
        <p>&nbsp;</p>
        <p><a class="nonblock" href="https://www.facebook.com/events/134929133624382/">RSVP on Event Page</a></p>
       </div>
-      <div class="Button rounded-corners clearfix colelem" id="buttonu2810"><!-- container box -->
-       <div class="clearfix grpelem" id="u2811-4"><!-- content -->
+      <div class="Button rounded-corners clearfix colelem" id="buttonu2436"><!-- container box -->
+       <div class="clearfix grpelem" id="u2437-4"><!-- content -->
         <p>Buy</p>
        </div>
-       <div class="rounded-corners grpelem" id="u2812"><!-- simple frame --></div>
+       <div class="rounded-corners grpelem" id="u2438"><!-- simple frame --></div>
       </div>
-      <div class="size_fixed colelem" id="u2813"><!-- custom html -->
+      <div class="size_fixed colelem" id="u2445"><!-- custom html -->
        
 <div class="fb-comments" data-href="https://www.facebook.com/CommunityOrganisation/posts/1039874776097941" data-mobile="false" data-width="100%" data-colorscheme="light" data-action="comment" data-num-posts="5" data-order_by="reverse_time"></div>
 
       </div>
      </div>
-     <div class="size_fixed grpelem" id="u2809"><!-- custom html -->
+     <div class="size_fixed grpelem" id="u2339"><!-- custom html -->
       
 <iframe class="actAsDiv" style="width:100%;height:100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;q=QUT%20Gradens%20Point&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
 
      </div>
-     <div class="grpelem" id="u2814"><!-- custom html -->
+     <div class="grpelem" id="u2460"><!-- custom html -->
       <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCommunityOrganisation%2Fposts%2F1039874776097941&width=400" width="400" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
      </div>
     </div>
-    <div class="verticalspacer" data-offset-top="1516" data-content-above-spacer="1595" data-content-below-spacer="125"></div>
+    <div class="verticalspacer" data-offset-top="1508" data-content-above-spacer="1587" data-content-below-spacer="125"></div>
     <div class="colelem" id="u126"><!-- simple frame --></div>
     <div class="clearfix colelem" id="pu2664-3"><!-- group -->
      <div class="clearfix grpelem" id="u2664-3"><!-- content -->
@@ -187,7 +187,7 @@ Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
 Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-Muse.Utils.initWidget('#slideshowu2782', ['#bp_infinity'], function(elem) { var widget = new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'off',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false}); $(elem).data('widget', widget); return widget; });/* #slideshowu2782 */
+Muse.Utils.initWidget('#slideshowu2174', ['#bp_infinity'], function(elem) { var widget = new WebPro.Widget.ContentSlideShow(elem, {autoPlay:true,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:false,shuffle:false,transitionDuration:500,enableSwipe:true,elastic:'off',resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false}); $(elem).data('widget', widget); return widget; });/* #slideshowu2174 */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};

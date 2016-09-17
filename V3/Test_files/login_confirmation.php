@@ -6,7 +6,8 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'qwe';
-$GLOBALS['link'] = mysqli_connect($dbhost, $dbuser, $dbpass, 'test');
+$dbname = 'TheDatabase';
+$GLOBALS['link'] = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 //Defining variables
 $GLOBALS ['ACCOUNT_NUMBER'] = "";
@@ -20,6 +21,7 @@ $GLOBALS ['EMAIL'] = "";
 function set_accountdetails($AN, $account_type){
 	global $link;
 	global $ID;
+	global $ACCOUNT_TYPE;
 	global $FIRSTNAME;
 	global $LASTNAME;
 	global $EMAIL;
@@ -32,7 +34,13 @@ function set_accountdetails($AN, $account_type){
 	$LASTNAME = $row['lastName'];
 	$EMAIL = $row['email'];
 	
-	
+	session_start();
+	$_SESSION['ID'] = $ID;
+	$_SESSION['ACCOUNT_TYPE'] = $ACCOUNT_TYPE;
+	$_SESSION['FIRSTNAME'] = $FIRSTNAME;
+	$_SESSION['LASTNAME'] = $LASTNAME;
+	$_SESSION['ID'] = $ID;
+	$_SESSION['EMAIL'] = $EMAIL;
 }
 
 function login(){
@@ -50,6 +58,7 @@ function login(){
 	$sql = "Select * FROM account";
 	$result = mysqli_query($link,$sql);
 	
+	//cycle through all accounts ands looks for a matching account number and password
 	while ($row = mysqli_fetch_array ($result)){
 	if ($input_AN == $row['Accountnumber'] && $input_Pass == $row['Password']){
 		$ACCOUNT_NUMBER = $row['Accountnumber'];
@@ -65,7 +74,7 @@ function login(){
 	}
 }
 }
-
+/*
 function display_all(){
 	global $ACCOUNT_TYPE;
 	global $FIRSTNAME;
@@ -77,32 +86,22 @@ function display_all(){
 	echo "Your Account Type: " . $ACCOUNT_TYPE. "<br/>";
 	echo "First Name: " . $FIRSTNAME . "<br/>";
 	echo "Last Name: " . $LASTNAME . "<br/>";
-	echo "Email: " . $EMAIL . "<br/>";
-	
-	session_start();
-	$_SESSION['ID'] = $ID;
-	$_SESSION['ACCOUNT_TYPE'] = $ACCOUNT_TYPE;
-	$_SESSION['FIRSTNAME'] = $FIRSTNAME;
-	$_SESSION['LASTNAME'] = $LASTNAME;
-	$_SESSION['ID'] = $ID;
-	$_SESSION['EMAIL'] = $EMAIL;
+	echo "Email: " . $EMAIL . "<br/>" . "<br/>";
 }
+*/
 
 //Calling functions
 if(login() == true){
 	set_accountdetails($ACCOUNT_NUMBER, $ACCOUNT_TYPE);
-	display_all();
-	?> 
-	
-	<form action = "edit.html" method = "POST">
-	<button name="subject" type="submit" value="HTML">EDIT</button>
+	?>
+	<form action = "display_account_details.php" method = "POST">
+	<button name="subject" type="submit" value="HTML">View Account</button>
 	</form> 
-	
 	<?php
-} else {
+	} else {
 	echo "Failed to Login. Try Again ";
 	?> 
-	<form action = "test.html" method = "POST">
+	<form action = "login_form.html" method = "POST">
 	<button name="subject" type="submit" value="HTML">Try Again</button>
 	</form> 
 	<?php

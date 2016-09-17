@@ -71,7 +71,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
        <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1291" href="contact.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1294-4"><!-- content --><p><span id="u1294">Contact</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1311"><!-- vertical box -->
-       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">Donate</span></p></div></a>
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u1312" href="faq.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1314-4"><!-- content --><p><span id="u1314">FAQ</span></p></div></a>
       </div>
       <div class="MenuItemContainer clearfix grpelem" id="u1332"><!-- vertical box -->
        <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u1333" href="donate.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u1335-4"><!-- content --><p><span id="u1335">Donate</span></p></div></a>
@@ -82,44 +82,34 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      </nav>
     </div>
     <div class="clearfix colelem" id="u2912-34"><!-- content -->
-     <h2 id="u2912-2"><span class="actAsDiv normal_text" id="u2913"><!-- content --><span class="actAsDiv" id="u2914"><!-- simple frame --></span></span><span id="u2912">FAQ?</span></h2>
+     <h2 id="u2912-2"><span class="actAsDiv normal_text" id="u2913"><!-- content --><span class="actAsDiv" id="u2914"><!-- simple frame --></span></span><span id="u2912">Donate</span></h2>
      <p id="u2912-3">&nbsp;</p>
      <p id="u2912-4">
-	
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "qwe";
-$dbname = "Donations";
+	 Register to Donate: 
+	<form action = "newuser.php" method="post">
+Name: <input type="string" name="name"><br>
+E-mail: <input type="string" name="email"><br>
+Password: <input type="string" name="Password"><br>
+Address 1 : <input type="string" name="Address1"><br>
+Address 2: <input type="string" name="Address2"><br>
+City: <input type="string" name="City"><br>
+Country: <input type="string" name="Country"><br>
+Postcode: <input type="string" name="Postcode"><br>
+Phone: <input type="string" name="Phone"><br>
+<input type="submit">
+</form>
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
-$sql = "
-INSERT INTO  Donors (Name, email)
-VALUES ('John', 'john@example.com');";
-
-if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-
-mysqli_close($conn);
-?>
 		</p>
 
-     <p id="u2912-32">&nbsp;</p>
-    </div>
-    <div class="verticalspacer" data-offset-top="846" data-content-above-spacer="926" data-content-below-spacer="125"></div>
-    <div class="colelem" id="u126"><!-- simple frame --></div>
-    <div class="clearfix colelem" id="pu2664-3"><!-- group -->
-     <div class="clearfix grpelem" id="u2664-3"><!-- content -->
-      <p>&nbsp;</p>
+     <p id="u2912-32">Already have An Ancount? </p>
+	 <br/>
+	  <form action = "login.php" method="post">
+	Name: <input type="string" name="name"><br>
+	E-mail: <input type="string" name="email"><br>
+	Password: <input type="string" name="Password"><br>
+		<input type="submit">
+		</form>
      </div>
      <div class="clearfix grpelem" id="u135-6"><!-- content -->
       <p>Community Organisation Website ©<br/>&nbsp;Created in 2016 for IAB299</p>

@@ -8,7 +8,6 @@
   <script type="text/javascript">
    // Update the 'nojs'/'js' class on the html node
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
-
 // Check that all required assets are uploaded and up-to-date
 if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "museconfig.js", "jquery.musemenu.js", "jquery.musepolyfill.bgsize.js", "jquery.watch.js", "require.js", "faq.css"], "outOfDate":[]};
 </script>
@@ -85,17 +84,17 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
      <h2 id="u2903-2"><span class="actAsDiv normal_text" id="u2904"><!-- content --><span class="actAsDiv" id="u2905"><!-- simple frame --></span></span><span id="u2903">FAQ?</span></h2>
      <p id="u2903-3">&nbsp;</p>
      <p id="u2903-4">&nbsp;</p>
-     <p id="u2903-6">1.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     <p id="u2903-6">1.How do create a account?.</p>
      <p id="u2903-7">&nbsp;</p>
-     <p id="u2903-9">&nbsp;Maecenas vel velit vel massa feugiat posuere. Duis aliquet sem massa, nec lobortis nunc volutpat nec. Praesent ultricies posuere laoreet. Sed a neque lorem. Phasellus a urna nec dolor auctor finibus. Nulla in dignissim nisl. Etiam vulputate massa vitae mi pellentesque, sed venenatis mauris laoreet. Mauris feugiat vel ante quis iaculis. Quisque elementum libero a mauris malesuada dapibus.</p>
+     <p id="u2903-9">&nbsp;To Create a account, simply head navigate over login tab and fill in the required fields under sign up, and press submit.</p>
      <p id="u2903-10">&nbsp;</p>
-     <p id="u2903-12">2. Praesent scelerisque at felis ut venenatis. Praesent ac bibendum nisl. Sed convallis sagittis urna.</p>
+     <p id="u2903-12">2. How can I be alerted and notified by a event?.</p>
      <p id="u2903-13">&nbsp;</p>
-     <p id="u2903-15">At porttitor ex volutpat eu. Proin nunc orci, vestibulum ut libero vitae, fermentum finibus lacus. Phasellus tristique ornare nisl in blandit. Morbi lobortis cursus mollis. Donec vel mauris ullamcorper sapien tristique pulvinar eget sit amet risus. Vivamus mollis est vitae sapien cursus ornare. Etiam sodales sollicitudin sapien at dictum. Pellentesque nec magna ut leo varius auctor at sit amet erat. Sed at felis semper dui scelerisque egestas in interdum dui. Ut vel ullamcorper augue.</p>
+     <p id="u2903-15"> You can be alerted by any updates on Facebook with the associated event. Following us at Org_Community on Twitter will also allow you to receive updates..</p>
      <p id="u2903-16">&nbsp;</p>
-     <p id="u2903-18">3. Nam et urna egestas mi tempus laoreet ac ac magna. Nunc consequat.</p>
+     <p id="u2903-18">3. Does there have to be adds on the website? .</p>
      <p id="u2903-19">&nbsp;</p>
-     <p id="u2903-21">Dolor eget lobortis vehicula, risus purus eleifend tellus, consequat condimentum tellus purus nec sapien. Sed et aliquet leo, vel egestas metus. Aliquam ac aliquam libero, nec fermentum leo. Vestibulum ut massa ante. Ut ullamcorper nunc mi, quis tincidunt sem rhoncus non. Ut et hendrerit nisl.</p>
+     <p id="u2903-21"> Yes, adds help to help us to promote other companies and help to ensure the success of our service. However addbock is a option if you wanted to remove the adds.</p>
      <p id="u2903-22">&nbsp;</p>
      <p id="u2903-24">4. Praesent vel porttitor risus. Curabitur non velit suscipit, ornare justo bibendum, lacinia nisl.</p>
      <p id="u2903-25">&nbsp;</p>
@@ -149,7 +148,6 @@ Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(el
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
-
 </script>
   <!-- RequireJS script -->
   <script src="scripts/require.js?crc=4108833657" type="text/javascript" async data-main="scripts/museconfig.js?crc=169177150" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>

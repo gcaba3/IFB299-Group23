@@ -1,3 +1,8 @@
 Link to website
 http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/
 
+Access to new features 
+http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/Test_files/login_form.html
+
+The new features are still very raw and mostly focuses on functionality. 
+For the next sprint we need to make a user story to integrate it with the websites theme.

@@ -1,12 +1,12 @@
 <html>
 <body>
-
+<h1> Confirmation </h1>
 <?php
 //connect to and select database
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'qwe';
-$dbname = 'TheDatabase';
+$dbname = 'thedatabase';
 $GLOBALS['link'] = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 //Defining variables
@@ -58,6 +58,13 @@ function login(){
 	$sql = "Select * FROM account";
 	$result = mysqli_query($link,$sql);
 	
+	// Check connection
+	if (!$result) {
+		die("Connection failed: " . mysqli_connect_error());
+	} else {
+		echo "Connected successfully" . "<br/>"."<br/>";
+	}
+	
 	//cycle through all accounts ands looks for a matching account number and password
 	while ($row = mysqli_fetch_array ($result)){
 	if ($input_AN == $row['Accountnumber'] && $input_Pass == $row['Password']){
@@ -108,6 +115,5 @@ if(login() == true){
 }
 mysqli_close($link);
 ?>
-
 </body>
 </html>

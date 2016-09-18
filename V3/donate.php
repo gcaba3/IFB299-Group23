@@ -104,7 +104,7 @@ Phone: <input type="string" name="Phone"><br>
 
      <p id="u2912-32">Already have An Ancount? </p>
 	 <br/>
-	  <form action = "login.php" method="post">
+	  <form action = "loginauth.php" method="post">
 	Name: <input type="string" name="name"><br>
 	E-mail: <input type="string" name="email"><br>
 	Password: <input type="string" name="Password"><br>

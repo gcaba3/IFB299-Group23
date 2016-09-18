@@ -6,7 +6,7 @@
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'qwe';
-$dbname = 'TheDatabase';
+$dbname = 'thedatabase';
 $GLOBALS['link'] = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 session_start();

@@ -1,5 +1,12 @@
+<!DOCTYPE html>
 <html>
 <body>
+
+<?php
+echo "Log In Test:";
+?>
+
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -14,25 +21,23 @@ if (!$conn) {    die("Connection failed: " . mysqli_connect_error());
 
 }
 
-$sql = "INSERT INTO  Donors (Name, email, Address1, Address2, City, Country, Postcode, Phone, Password)
-VALUES ('{$_POST['name']}',
-'{$_POST['email']}',
-'{$_POST['Address1']}',
-'{$_POST['Address2']}',
-'{$_POST['City']}',
-'{$_POST['Country']}',
-'{$_POST['Postcode']}',
-'{$_POST['Phone']}',
-'{$_POST['Password']}');";
+$sql = "SELECT * 
+FROM Donors
+WHERE  `Email` LIKE '{$_POST[email]}' 
+AND 'password' LIKE '{$_POST[Password]}';";
+
+
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo " Record Matched Successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	header('Location: donate.php');   
 }
 
 mysqli_close($conn);
 ?>
 </body>
 </html>
+

@@ -1,5 +1,7 @@
 <HTML>
 <BODY>
+
+<h1>Account details </h1>
 <?php
 session_start();
 $ACCOUNT_TYPE = $_SESSION['ACCOUNT_TYPE'];
@@ -16,6 +18,7 @@ echo "Email: " . $EMAIL . "<br/>" . "<br/>";
 
 if ($ACCOUNT_TYPE == "planner"){
 	?>
+	<h1>Account Details</h1>
 	<form action = "display_emails.php" method = "POST">
 		<button name="all" type="click" value="HTML">Show all emails</button>
 	</form> 

@@ -1,3 +1,31 @@
+<?php require 'Connections/connections.php';?>
+<?php
+
+//check if form submitted
+if(isset($_POST['login'])){
+		session_start();
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		
+		//Set Query
+		$result = $con->query("select * from account where username = '$username' AND Password ='$password'");
+		
+		//$store query result 
+		$row = mysqli_fetch_assoc($result);
+		
+		//Store variables needed in session variable(s). 
+		$_SESSION['ACCOUNTNUMBER'] = $row['Accountnumber'];
+		$_SESSION['ACCOUNTTYPE'] = $row['Accounttype'];	
+		
+		//login if account exists
+		if(isset($_SESSION['ACCOUNTNUMBER'])){
+			header('Location: index.php');
+		} else {
+			header('Location: access_denied.php');
+		}
+				
+	}
+?>
 <!DOCTYPE html>
 <html class="nojs html css_verticalspacer" lang="en-US">
  <head>
@@ -83,86 +111,17 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     </div>
     <div class="clearfix colelem" id="pu1562-4"><!-- group -->
      <div class="clearfix grpelem" id="u1562-4"><!-- content -->
-      <p>Sign Up</p>
-     </div>
-     <div class="clearfix grpelem" id="u1566-4"><!-- content -->
-      <p>Log In</p>
-     </div>
-    </div>
-    <form class="form-grp clearfix colelem" id="widgetu1438" method="post" enctype="multipart/form-data" action="scripts/form-u1438.php"><!-- none box -->
-     <div class="fld-grp clearfix grpelem" id="widgetu1452" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1454-4" for="widgetu1452_input"><!-- content --><span class="actAsPara">Name:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1453-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1452_input" name="custom_U1452" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu1452_prompt" for="widgetu1452_input"><span class="actAsPara">Enter Name</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1455-4"><!-- content -->
-       <p>Required</p>
+     <h1>Login</h1>
+<form name="Login/Login_form.php" method="post" action="">
+<label:> Username:<br/> </label>
+<input name="username" type="text" autofocus="autofocus" required="required"><br/>
+<label> Password:<br/></label>
+<input name="password" type="password" autofocus="autofocus" required="required"><br/>
+
+<input name="login" type="submit" id="login" formmethod="POST" value="login"><br/>
       </div>
      </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1444" data-required="true" data-type="email"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1445-4" for="widgetu1444_input"><!-- content --><span class="actAsPara">Email:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1447-4"><!-- content --><input class="wrapped-input" type="email" spellcheck="false" id="widgetu1444_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu1444_prompt" for="widgetu1444_input"><span class="actAsPara">Enter Email</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1446-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1473" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1475-4" for="widgetu1473_input"><!-- content --><span class="actAsPara">Company:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1476-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1473_input" name="custom_U1473" tabindex="3"/><label class="wrapped-input fld-prompt" id="widgetu1473_prompt" for="widgetu1473_input"><span class="actAsPara">Enter Company</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1474-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1465" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1467-4" for="widgetu1465_input"><!-- content --><span class="actAsPara">Work Address:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1466-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1465_input" name="custom_U1465" tabindex="4"/><label class="wrapped-input fld-prompt" id="widgetu1465_prompt" for="widgetu1465_input"><span class="actAsPara">Enter Address</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1468-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1461" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1463-4" for="widgetu1461_input"><!-- content --><span class="actAsPara">City:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1462-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1461_input" name="custom_U1461" tabindex="5"/><label class="wrapped-input fld-prompt" id="widgetu1461_prompt" for="widgetu1461_input"><span class="actAsPara">Enter City</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1464-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1439" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1441-4" for="widgetu1439_input"><!-- content --><span class="actAsPara">State:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1442-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1439_input" name="custom_U1439" tabindex="6"/><label class="wrapped-input fld-prompt" id="widgetu1439_prompt" for="widgetu1439_input"><span class="actAsPara">Enter State</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1440-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1469" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1470-4" for="widgetu1469_input"><!-- content --><span class="actAsPara">Zip code:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1471-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1469_input" name="custom_U1469" tabindex="7"/><label class="wrapped-input fld-prompt" id="widgetu1469_prompt" for="widgetu1469_input"><span class="actAsPara">Enter Zip</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1472-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="fld-grp clearfix grpelem" id="widgetu1448" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1450-4" for="widgetu1448_input"><!-- content --><span class="actAsPara">Country:</span></label>
-      <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u1449-4"><!-- content --><input class="wrapped-input" type="text" spellcheck="false" id="widgetu1448_input" name="custom_U1448" tabindex="8"/><label class="wrapped-input fld-prompt" id="widgetu1448_prompt" for="widgetu1448_input"><span class="actAsPara">Enter Country</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1451-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
-     <div class="clearfix grpelem" id="u1478-4"><!-- content -->
-      <p>Submitting Form...</p>
-     </div>
-     <div class="clearfix grpelem" id="u1456-4"><!-- content -->
-      <p>The server encountered an error.</p>
-     </div>
-     <div class="clearfix grpelem" id="u1443-4"><!-- content -->
-      <p>Form received.</p>
-     </div>
-     <input class="submit-btn NoWrap grpelem" id="u1477-17" type="submit" value="" tabindex="10"/><!-- state-based BG images -->
-     <div class="fld-grp clearfix grpelem" id="widgetu1457" data-required="true"><!-- none box -->
-      <label class="fld-label actAsDiv clearfix grpelem" id="u1460-4" for="widgetu1457_input"><!-- content --><span class="actAsPara">Message:</span></label>
-      <span class="fld-textarea actAsDiv clearfix grpelem" id="u1459-4"><!-- content --><textarea class="wrapped-input" id="widgetu1457_input" name="custom_U1457" tabindex="9"></textarea><label class="wrapped-input fld-prompt" id="widgetu1457_prompt" for="widgetu1457_input"><span class="actAsPara">Enter Your Message</span></label></span>
-      <div class="fld-message clearfix grpelem" id="u1458-4"><!-- content -->
-       <p>Required</p>
-      </div>
-     </div>
+	 </div>
     </form>
     <form class="form-grp clearfix colelem" id="widgetu1731" method="post" enctype="multipart/form-data" action="scripts/form-u1731.php"><!-- none box -->
      <div class="fld-grp clearfix grpelem" id="widgetu1737" data-required="true" data-type="email"><!-- none box -->

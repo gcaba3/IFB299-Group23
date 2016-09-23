@@ -2,7 +2,7 @@
 //connect to and select database
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'qwe';
+$dbpass = '';
 $dbname = 'thedatabase';
 
 $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);

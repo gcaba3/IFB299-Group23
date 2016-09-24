@@ -62,7 +62,7 @@ if(isset($_POST['login'])){
   <input name="password" type="password" autofocus id="password" placeholder="Password"><br/><br/>
   <input name="login" type="submit" id="login" value="Login">
   </p>
-  <p>Register</p>
+    <p>Dont have an account? <a href="Login_Registration.php"> Register </a></p>
 </form>
 </div>
 </body>

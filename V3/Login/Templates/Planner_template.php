@@ -7,17 +7,6 @@ $accountnumber = $_SESSION['ACCOUNTNUMBER'];
 $account_type = $_SESSION['ACCOUNTTYPE'];
 $username = $_SESSION['USERNAME'];
 
-//check if account exists
-if(isset($accountnumber)){
-	//Set Query
-	$sql = "select * from $account_type where Account_number = '$accountnumber'";
-	$result = mysqli_query($con, $sql);
-	
-	//$store query result 
-	$row = mysqli_fetch_assoc($result);
-} else {
-	header('Location: error_page.php');
-}
 ?>
 <!doctype html>
 <html>
@@ -25,7 +14,7 @@ if(isset($accountnumber)){
 <link href="css/Master.css" rel="stylesheet" type="text/css" />
 <link href="css/Menu.css" rel="stylesheet" type="text/css" />
 <meta charset="utf-8">
-<title>Account</title>
+<title>Planner's template</title>
 </head>
 
 <body>
@@ -33,16 +22,6 @@ if(isset($accountnumber)){
     	<div align="center" class="Header"></div>
         <div class="Menu">
             <div id="tabs31">
-            <?php 
-			//Filters which tabs to display depending on the account type.
-			if ($account_type == "member") { ?>
-                <ul>
-                    <li><a href="Account.php" title=""><span>Account</span></a></li>
-                    <li><a href="Attending_events.php" title=""><span>Attending Events</span></a></li>
-                    <li><a href="Donations.php" title=""><span>Donations</span></a></li>
-                    <li><a href="Available_events.php" title=""><span>Available Events</span></a></li>
-                </ul>
-           	<?php } elseif ($account_type == "planner") { ?>
             	<ul>
                     <li><a href="Account.php" title=""><span>Account</span></a></li>
                     <li><a href="Planners_Events.php" title=""><span>Events</span></a></li>
@@ -50,22 +29,6 @@ if(isset($accountnumber)){
                     <li><a href="Sponsors.php" title=""><span>Sponsors</span></a></li>
                     <li><a href="Email.php" title=""><span>Email</span></a></li>
                 </ul>
-                <?php 
-				} elseif ($account_type == "volunteer") {
-				// Checks if the volunteer is assigned any event. 
-				// If there is no events assigned then it sets the session variable to 0, so that a proper error messages is displayed on the event page. 
-				if (isset($row['Event_ID'])){
-					$_SESSION['EVENTID'] = $row['Event_ID'];
-				} else {
-					$_SESSION['EVENTID'] = 0;
-				}
-				 ?>
-                <ul>
-                    <li><a href="Account.php" title=""><span>Account</span></a></li>
-                    <li><a href="Event_page.php" title=""><span>Event</span></a></li>
-                    <li><a href="Planners.php" title=""><span>Planners</span></a></li>
-                </ul>
-                <?php } ?>
             </div>
         </div>
         <div class="LeftBody">

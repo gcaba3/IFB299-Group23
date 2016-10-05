@@ -42,4 +42,10 @@ background-repeat:no-repeat;
 	float:right;
 	height:auto;	
 }
+.FullBody{
+	margin-top:0px;
+	width:800px;
+	float:left;
+	height:400px;		
+}
 .Footer {height:100px; }

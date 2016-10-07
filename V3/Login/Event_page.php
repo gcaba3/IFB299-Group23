@@ -9,6 +9,7 @@ $username = $_SESSION['USERNAME'];
 $event_id = $_SESSION['EVENTID'];
 $error_message = FALSE;
 
+//checks if event id is not 0. If it is it flags the error message
 if($event_id != 0){
 	//Set Query
 	$sql = "select * from event where Event_ID = '$event_id'";
@@ -59,7 +60,10 @@ if($event_id != 0){
             </div>
         </div>
         <div class="LeftBody">
-        <?php  if($error_message == FALSE) { ?>
+        
+        <?php  
+		//Checks if the error message is flagged true. If not then loads in the required information. If it is it displayes the error message.
+		if($error_message == FALSE) { ?>
             <h1><?php echo ucfirst($event['Event_Name']); ?></h1>
             <p>Country: <?php echo ucfirst($event['Country']); ?></p>
             <p>State: <?php echo ucfirst($event['State']); ?></p>
@@ -95,7 +99,37 @@ if($event_id != 0){
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBj8rAAP7pg_CUMypAErvj3Eb8hjsJDsTg
                 &q=<?php echo urlencode($full_address); ?>">
         </iframe>
-        <?php } ?>
+   	    <table style="width:100%" border="0"> 
+        <tr>
+        <th width="150">Planner</th>
+        <th width="290" style="text-align:left;">Email</th>
+        </tr>
+        <p>
+        <?php
+		//set query
+		$sql_eventplanners = "select * FROM event_planner where event_ID = '$event_id'";
+		$ep_result = mysqli_query($con, $sql_eventplanners);
+		
+		
+		//store each event planner, as an iteration of the while loop
+		while($event_planner = mysqli_fetch_array($ep_result)){
+			$planner_id = $event_planner['planner_ID'];
+			
+			//Select everything for that planner
+			$sql_planner = "select * FROM planner where ID = '$planner_id'";
+			$p_result = mysqli_query($con, $sql_planner);
+			
+			//Store each planner as a row for the table.
+			//Then fill in the table with each row.
+			$row = mysqli_fetch_array($p_result);
+			echo "<tr>";
+			echo '<td style="text-align:center;">' . $row['FirstName'] . $row['LastName'] . '</td>';
+			echo '<td style="text-align:left;">' . $row['Email'] . '</td>';
+		}
+		?>
+    </table> 
+    <?php } ?>      
+        </p>
   </div>
 </div>
 </body>

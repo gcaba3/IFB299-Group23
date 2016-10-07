@@ -7,6 +7,7 @@ $accountnumber = $_SESSION['ACCOUNTNUMBER'];
 $account_type = $_SESSION['ACCOUNTTYPE'];
 $username = $_SESSION['USERNAME'];
 
+//Set the session variable of event as the selected event
 if(isset($_POST['view_event'])){
 	$_SESSION['EVENTID'] = $_POST['event_id'];
 	header ("Location: Event_page.php");
@@ -44,35 +45,44 @@ if(isset($_POST['view_event'])){
         <th width="124">View Event</th>
         </tr>
 		<?php
-		//Set Query
+		//Set Query - select the events that is tied with the account number
 		$sql_event_id = "select * from attending_events where Account_number = '$accountnumber'";
 		$result = mysqli_query($con, $sql_event_id);
+		
+		//if no result is found then echo an error message.
 		if (mysqli_num_rows($result) == 0){
 			echo "You Are not registered to any events. Please click on avaialble events. To register.";	
 		} else 
 		{
+			//store each event as a row, for each while iteration
 			while ($row_ID = mysqli_fetch_array($result))
 			{
 			$event_id = $row_ID['Event_ID'];
 			$tickets_reserved = $row_ID['Reserved_tickets'];
+			
+			//select everything for that event
 			$sql_event_details = "select * from event where Event_ID = '$event_id'";
 			$result2 = mysqli_query($con, $sql_event_details);
-				while($row = mysqli_fetch_array($result2))
-				{
-					echo "<tr>";
-					echo '<td style="text-align:center;">' . $row['Event_Name'] . '</td>';
-					echo '<td style="text-align:center;">' . $row['Event_Date'] . '</td>';
-					echo '<td style="text-align:center;">' . $row['Event_Time'] . '</td>';
-					echo '<td style="text-align:center;">' . $tickets_reserved . '</td>';
-					?> 
-					<td style="text-align:center;">
-						<form  action="" method="post"> 
-						<input type="hidden" name="event_id" value = <?php echo  $event_id;?>>
-						<input type="submit" value="View" name="view_event" id="view_event">
-						</form>
-					</td>
-					<?php
-				}
+				
+			//load the information for that event as a row for the table.
+			//Then fill the table as necessary.
+			$row = mysqli_fetch_array($result2);
+			echo "<tr>";
+			echo '<td style="text-align:center;">' . $row['Event_Name'] . '</td>';
+			echo '<td style="text-align:center;">' . $row['Event_Date'] . '</td>';
+			echo '<td style="text-align:center;">' . $row['Event_Time'] . '</td>';
+			echo '<td style="text-align:center;">' . $tickets_reserved . '</td>';
+			?> 
+            
+            <!-- The view button at each row-->
+			<td style="text-align:center;">
+				<form  action="" method="post"> 
+                 <!-- Set the current event's id as the hidden input of the view button-->
+				<input type="hidden" name="event_id" value = <?php echo  $event_id;?>>
+				<input type="submit" value="View" name="view_event" id="view_event">
+				</form>
+			</td>
+			<?php
 			}
 		}
 		?>

@@ -46,6 +46,7 @@ if(isset($accountnumber)){
             	<ul>
                     <li><a href="Account.php" title=""><span>Account</span></a></li>
                     <li><a href="Planners_Events.php" title=""><span>Events</span></a></li>
+                    <li><a href="Volunteer_list.php" title=""><span>Volunteers</span></a></li>
                     <li><a href="Finances.php" title=""><span>Finances</span></a></li>
                     <li><a href="Sponsors.php" title=""><span>Sponsors</span></a></li>
                     <li><a href="Email.php" title=""><span>Email</span></a></li>

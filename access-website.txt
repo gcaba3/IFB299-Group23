@@ -2,7 +2,36 @@ Link to website
 http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/
 
 Access to new features 
-http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/Login/login.php
+Click on log in. Use one of the following credentials to see different features on different accounts.
 
-The new features are still very raw and mostly focuses on functionality. 
-For the next sprint we need to make a user story to integrate it with the websites theme.
+First row - account type
+second - username
+third - password
+
+member
+member
+qwe
+
+planner
+planner
+asd
+
+volunteer
+volunteer
+zxc
+
+planner
+secondplanner
+rty
+
+volunteer
+secondvolunteer
+zxc
+
+member
+Secondguy
+qwe
+
+member
+new
+qwe

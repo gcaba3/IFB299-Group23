@@ -2,6 +2,7 @@
 <?php
 session_start();
 
+//Returns the total of all the members donations for one specific event
 function total_members_donation($event_ID){
 	global $con;
 	// Set query - select the sum of all donations to one event
@@ -12,6 +13,7 @@ function total_members_donation($event_ID){
 	return $members_donations;
 }
 
+//Returns the total of all the sponsors donations for one specific event
 function total_sponsors_donation($event_ID){
 	global $con;
 	// Set query - select the sum of all donations to one event
@@ -22,6 +24,7 @@ function total_sponsors_donation($event_ID){
 	return $sponsors_donations;
 }
 
+//Adds the total of sponsors and members donations
 function calc_total_donations($event_ID){
 	$members_donation = total_members_donation($event_ID);
 	$sponsors_donation = total_sponsors_donation($event_ID);
@@ -29,6 +32,7 @@ function calc_total_donations($event_ID){
 	return $total_donation;
 }
 
+//Calculates the rough cost, then returns the calculated value
 function calc_rough_cost($event_ID){
 	global $con;
 	// Set query - select the sum of all the tickets reserved for one event
@@ -44,11 +48,13 @@ function calc_rough_cost($event_ID){
 	return $rough_cost;
 }
 
+//calculates the final cost by taking away the total donation from the rough cost. Then returns the final cost value
 function calc_final_cost($rough_cost, $total_donations){
 	$final_cost = $rough_cost - $total_donations;
 	return $final_cost;
 }
 
+//Returns the number of members attending one event
 function total_members_attending($event_ID){
 	global $con;
 	
@@ -59,6 +65,7 @@ function total_members_attending($event_ID){
 	return $total_members_attending;
 }
 
+//returns the number of members that donated to one event
 function num_members_that_donated($event_ID){
 	global $con;
 	
@@ -69,6 +76,7 @@ function num_members_that_donated($event_ID){
 	return $members_that_donated;
 }
 
+//Returns the registration statues of one event
 function registration_statues($event_ID){
 	global $con;
 	
@@ -81,27 +89,35 @@ function registration_statues($event_ID){
 	return $registration;
 }
 
+//Returns the value of the ticket cost for the members that didnt donate
 function calc_ticket_cost($final_cost, $total_members_attending, $members_that_donated){
 	global $con;
 	
 	$members_that_didnt_donate = $total_members_attending - $members_that_donated;
 	
+	//Checks if the calculated value is 0 or negative or an error would pop up.
 	if ($members_that_didnt_donate <= 0 ){
 		$ticket_price = 0;
 	} else {
+		//Final calculation for the ticket price
 		$ticket_price = $final_cost / $members_that_didnt_donate;
 	}
 
-	
 	return $ticket_price;
 }
 
+//Updates the finances table
 function update_table($event_id, $rough_cost, $total_donation, $final_cost, $total_members, $total_members_donated, $ticket_price){
 	global $con;
 	$total_tickets = $rough_cost / 20;
+	
+	//SQL - checks if an event id exists in the table
 	$sql = "select * FROM finances where Event_ID = '$event_id'";
 	$result = mysqli_query($con, $sql);
-	$num_rows = mysqli_num_rows($result);
+	$num_rows = mysqli_num_rows($result); // stores the number of results from query
+	
+	//Checks if the query returned any results.
+	//If there are any results it updates that row on the table. OR else it makes a new row
 	if($num_rows > 0){
 		$sql2 = "UPDATE finances 
 		SET Total_tickets = '$total_tickets' , Rough_cost = '$rough_cost', Total_donation = '$total_donation', 
@@ -117,7 +133,7 @@ function update_table($event_id, $rough_cost, $total_donation, $final_cost, $tot
 		}
 	
 }
-
+ //Deletes the row if the registration statues has been changed
 function delete_event($event_ID){
 	global $con;
 	$sql = "DELETE FROM finances WHERE Event_ID = '$event_ID'";
@@ -161,11 +177,12 @@ function delete_event($event_ID){
         <th width="290">Ticket Price</th>
         </tr>
         <?php
-		
+		//SQL - Select all the events
 		$sql = 'Select * FROM event ORDER BY regis_statues ASC';
 		$result = mysqli_query($con, $sql);
 		
-		
+		//cycle through all the events.
+		//With each event stored as while iteration
 		while ($row = mysqli_fetch_array($result)){
 			$event_ID = $row['Event_ID'];
 			$registration = registration_statues($event_ID);
@@ -174,6 +191,9 @@ function delete_event($event_ID){
 			echo '<td style="text-align:center;">' . $event_ID . '</td>';
 			echo '<td style="text-align:center;">' . $registration . '</td>';
 			
+			//Checks if the registration is closed.
+			//If it is then it shows the calculations
+			//If it is open then it doesnt show the calculations. As all tickets haven been reserved.
 			if($registration == 'Closed'){
 				$rough_cost = calc_rough_cost($event_ID);
 				$total_donations =  calc_total_donations($event_ID);
@@ -186,6 +206,7 @@ function delete_event($event_ID){
 				$members_that_donated = num_members_that_donated($event_ID);
 				$ticket_price = calc_ticket_cost($final_cost, $total_members_attending, $members_that_donated);
 				
+				//Fill the rest of the table with the proper values
 				echo '<td style="text-align:center;">' . '$'.$rough_cost . '</td>';
 				echo '<td style="text-align:center;">' . '$'.$total_donations . '</td>';
 				echo '<td style="text-align:center;">' . '$'.$final_cost . '</td>';
@@ -200,14 +221,16 @@ function delete_event($event_ID){
 				
 				update_table($event_ID, $rough_cost, $total_donations, $final_cost, $total_members_attending, $members_that_donated, $ticket_price);
 			} else {
+				// if the registration of the statues has been changed then it deletes that row from the finances table.
 				delete_event($event_ID);
 				echo "</tr>";
 			}
 		}
 		?>
         </table>
-        Note Ticket price is only for the members that didnt donate to the event.
-        
+        <p>
+        Note Ticket price is only for the members that didnt donate to the event. 
+        </p>
         </div>
 </div>
 </body>

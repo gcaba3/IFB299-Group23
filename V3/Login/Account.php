@@ -15,6 +15,9 @@ if(isset($accountnumber)){
 	
 	//$store query result 
 	$row = mysqli_fetch_assoc($result);
+	
+	//Store email variable to be used later
+	$_SESSION['EMAIL']  = $row['Email'];
 } else {
 	header('Location: error_page.php');
 }

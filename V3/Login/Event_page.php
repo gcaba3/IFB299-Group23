@@ -62,7 +62,7 @@ if($event_id != 0){
         <div class="LeftBody">
         
         <?php  
-		//Checks if the error message is flagged true. If not then loads in the required information. If it is it displayes the error message.
+		//Checks if the error message is flagged true. If not then loads in the required information for the page. If it is it displayes the error message.
 		if($error_message == FALSE) { ?>
             <h1><?php echo ucfirst($event['Event_Name']); ?></h1>
             <p>Country: <?php echo ucfirst($event['Country']); ?></p>
@@ -72,6 +72,7 @@ if($event_id != 0){
             <p>Start date:<?php echo $event['Event_Date']; ?></p>
             <p>Start time:<?php echo $event['Event_Time']; ?></p>
             <?php 
+			//Full address to be used in the google maps api
 			$full_address = $event['Address'] . ", " . $event['Postcode'] . ", " .$event['Country'];
 			if ($event['regis_statues'] == 'Open' &&  $account_type == "member") {?>
             <a href="#" title=""><span>Register</span></a>
@@ -88,7 +89,7 @@ if($event_id != 0){
 		  <?php if($account_type == 'planner'){?>
           <a href="#" title=""><span> Edit Event</span></a>
           &nbsp;
-          <a href="#" title=""><span> Stop Planning</span></a>
+          <a href="stop_planning.php" title=""><span> Stop Planning</span></a>
           <?php } ?>
           </p>
           <?php if($error_message == FALSE) {?>

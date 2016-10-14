@@ -18,6 +18,7 @@ if(isset($accountnumber)){
 	
 	//Store email variable to be used later
 	$_SESSION['EMAIL']  = $row['Email'];
+	$_SESSION['IDNUMBER'] = $row['ID'];
 } else {
 	header('Location: error_page.php');
 }
@@ -45,7 +46,10 @@ if(isset($accountnumber)){
                     <li><a href="Donations.php" title=""><span>Donations</span></a></li>
                     <li><a href="Available_events.php" title=""><span>Available Events</span></a></li>
                 </ul>
-           	<?php } elseif ($account_type == "planner") { ?>
+           	<?php } elseif ($account_type == "planner") { 
+			
+			
+			?>
             	<ul>
                     <li><a href="Account.php" title=""><span>Account</span></a></li>
                     <li><a href="Planners_Events.php" title=""><span>Events</span></a></li>

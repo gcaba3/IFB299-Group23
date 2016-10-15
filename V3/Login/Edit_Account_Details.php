@@ -5,7 +5,7 @@ $updated = FALSE;
 $accountnumber = $_SESSION['ACCOUNTNUMBER'];
 $account_type = $_SESSION['ACCOUNTTYPE'];
 
-//check if account exists
+//save button has been clicked
 if(isset($_POST['save'])){
 	$new_f_name = $_POST['f_name'];
 	$new_l_name = $_POST['l_name'];
@@ -13,7 +13,7 @@ if(isset($_POST['save'])){
 	$new_p_number = $_POST['p_number'];
 	
 	/*
-	Checks if any of the input fields has been field.
+	Checks if any of the input fields has been filled.
 	If one field is filled it updates that input field's correseponding database column.
 	
 	*/

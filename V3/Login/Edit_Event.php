@@ -7,6 +7,7 @@ $accountnumber = $_SESSION['ACCOUNTNUMBER'];
 $account_type = $_SESSION['ACCOUNTTYPE'];
 $username = $_SESSION['USERNAME'];
 $idnumber = $_SESSION['IDNUMBER'];
+$event_id = $_SESSION['EVENTID'];
 
 if(isset($_POST['submit'])){
 	//set the local variables from the form inputs
@@ -19,31 +20,34 @@ if(isset($_POST['submit'])){
 	$start_date = $_POST['start_date'];
 	$start_time = $_POST['start_time'];
 	
+	echo $regis_statues;
 	//insert inputs into the database
-	$sql = "INSERT INTO event(regis_statues, Event_Name, Country, State, Postcode, Address, Event_Date, Event_Time)
-			VALUES ('$regis_statues','$event_name','$country','$state','$postcode','$address','$start_date','$start_time')";
+	$sql = "UPDATE event
+		    SET regis_statues = '$regis_statues', Event_Name = '$event_name', Country = '$country', State = '$state',
+			Postcode = '$postcode', Address = '$address', Event_Date = '$start_date', Event_Time = '$start_time'
+			WHERE Event_ID = '$event_id'";
 	mysqli_query($con,$sql);
-	
-	//get the newest create event id
-	$sql2 = "SELECT * FROM event 
-			ORDER BY Event_ID DESC
-			LIMIT 1";
-	$result = mysqli_query($con, $sql2);
-	$row = mysqli_fetch_assoc($result);
-	$newest_eventID = $row['Event_ID'];
-	
-	//assign the current planner to the newest event id
-	$sql3 = "INSERT INTO event_planner(planner_ID, event_ID)
-			 VALUES ($idnumber, $newest_eventID)";
-	mysqli_query($con,$sql3);
-	
+
 	//return to planners event
-	header ("Location: Planners_Events.php");	 
+	header ("Location: Event_page.php");	 
 } else 
 if(isset($_POST['cancel'])){
 	//return to planners event
 	header ("Location: Planners_Events.php");
+}else 
+//Delete the event if button is clicked
+if(isset($_POST['delete'])){
+	//delete the event
+	$sql= "DELETE FROM event WHERE Event_ID = '$event_id'";
+	mysqli_query($con,$sql);
+	header ("Location: Planners_Events.php");
 }
+
+//Select the current event details
+$sql2 = "SELECT * FROM event where Event_ID = '$event_id'";
+$result2 = mysqli_query($con, $sql2);
+$row2 = mysqli_fetch_assoc($result2);
+
 ?>
 <!doctype html>
 <html>
@@ -51,7 +55,7 @@ if(isset($_POST['cancel'])){
 <link href="css/Master.css" rel="stylesheet" type="text/css" />
 <link href="css/Menu.css" rel="stylesheet" type="text/css" />
 <meta charset="utf-8">
-<title>Create New Event</title>
+<title>Edit Event Details</title>
 </head>
 
 <body>
@@ -79,44 +83,52 @@ if(isset($_POST['cancel'])){
               <tr>
                   <td width="100" style="text-align: right"><label>Registration Statues:</label></td>
                   <td width="100"><select id="regis_statues" name="regis_statues" required>
-                  <option value = "Open"> Open </option>
-                  <option value = "Closed"> Closed </option>
+                  <?php 
+				  if($row2['regis_statues'] == 'Open'){
+					  echo "<option value = 'Open'>" .  $row2['regis_statues'] . "</option>";
+					  echo "<option value = 'Closed'> Closed </option>";
+				  } else {
+					  echo "<option value = 'Closed'>" .  $row2['regis_statues'] . "</option>";
+					  echo "<option value = 'Open'> Open </option>";
+				  }
+				  ?>
                   </select></td>
                 <tr>
                   <td width="100" style="text-align: right"><label>Event Name:</label></td>
-                  <td width="100"><input name="event_name" type="text" required="required" id="start_time" placeholder="Enter Event Name"> </td>
+                  <td width="100"><input value = "<?php echo $row2['Event_Name'];?>" name="event_name" type="text" required="required" id="start_time" placeholder="Enter Event Name"> </td>
                 </tr>
                 <tr>
                   <td width="100" style="text-align: right"><label>Country:</label></td>
-                  <td width="100"><input name="country" type="text" required="required" id="country" placeholder="Enter Country"></td>
+                  <td width="100"><input value = "<?php echo $row2['Country'];?>" name="country" type="text" required="required" id="country" placeholder="Enter Country"></td>
                 </tr>
                 <tr>
                   <td width="100" style="text-align: right"><label>State:</label></td>
-                  <td width="100"><input name="state" type="text" required="required" id="state" placeholder="Enter State"> </td>
+                  <td width="100"><input value = "<?php echo $row2['State'];?>" name="state" type="text" required="required" id="state" placeholder="Enter State"> </td>
                 </tr>
                 <tr>
                   <td width="100" style="text-align: right"><label>Postcode:</label>
                   <label></label></td>
-                  <td width="100"><input  name="postcode" type="number" required="required" id="postcode" placeholder="Enter Postcode" min="0"></td>
+                  <td width="100"><input value = "<?php echo $row2['Postcode'];?>" name="postcode" type="number" required="required" id="postcode" placeholder="Enter Postcode" min="0"></td>
                 </tr>
                 <tr>
                   <td width="100" style="text-align: right"><label>Address:</label></td>
-                  <td width="100"><input name="address" type="text" required="required" id="address" placeholder="Enter Address"> </td>
+                  <td width="100"><input value = "<?php echo $row2['Address'];?>" name="address" type="text" required="required" id="address" placeholder="Enter Address"> </td>
                 </tr>
                 <tr>
                   <td width="100" style="text-align: right"><label>Start Date:</label></td>
-                  <td width="100"><input name="start_date" type="date" required="required" id="start_date"placeholder="Enter Start Date"></td>
+                  <td width="100"><input value = "<?php echo $row2['Event_Date'];?>" name="start_date" type="date" required="required" id="start_date"placeholder="Enter Start Date"></td>
                 </tr>
                 <tr>
                   <td width="100" style="text-align: right"><label>Start Time:</label></td>
-                  <td width="100"> <input name="start_time" type="time" required="required" id="start_time" placeholder="Enter Start Time"> </td>
+                  <td width="100"> <input value = "<?php echo $row2['Event_Time'];?>"name="start_time" type="time" required="required" id="start_time" placeholder="Enter Start Time"> </td>
                 </tr>
               </tbody>
             </table>
         </form>
         <form action="" method="post" id="cancel_form" style="margin-top:10px; margin-left:100px;">
         <input type="submit" name="cancel" id="cancel" value="Cancel">
-        <input type="submit" name="submit" id="submit" value="Create" style="margin-left:20px;" form="entryfields">
+        <input type="submit" name="delete" id="delete" value="Delete Event" style="margin-left:20px;">
+        <input type="submit" name="submit" id="submit" value="Save" style="margin-left:20px;" form="entryfields">
         </form>
         </div>
 </div>

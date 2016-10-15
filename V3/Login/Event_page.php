@@ -46,6 +46,7 @@ if($event_id != 0){
             	<ul>
                     <li><a href="Account.php" title=""><span>Account</span></a></li>
                     <li><a href="Planners_Events.php" title=""><span>Events</span></a></li>
+                    <li><a href="Volunteer_list.php" title=""><span>Volunteers</span></a></li>
                     <li><a href="Finances.php" title=""><span>Finances</span></a></li>
                     <li><a href="Sponsors.php" title=""><span>Sponsors</span></a></li>
                     <li><a href="Email.php" title=""><span>Email</span></a></li>
@@ -62,32 +63,39 @@ if($event_id != 0){
         <div class="LeftBody">
         
         <?php  
-		//Checks if the error message is flagged true. If not then loads in the required information for the page. If it is it displayes the error message.
+		//Checks if the error message is flagged true. If not then it loads in the required information for the page. If it is it displayes the error message.
 		if($error_message == FALSE) { ?>
             <h1><?php echo ucfirst($event['Event_Name']); ?></h1>
             <p>Country: <?php echo ucfirst($event['Country']); ?></p>
             <p>State: <?php echo ucfirst($event['State']); ?></p>
             <p>Postcode: <?php echo ucfirst($event['Postcode']); ?> </p>
-            <p>Address:<?php echo ucfirst($event['Address']); ?></p>
-            <p>Start date:<?php echo $event['Event_Date']; ?></p>
-            <p>Start time:<?php echo $event['Event_Time']; ?></p>
+            <p>Address: <?php echo ucfirst($event['Address']); ?></p>
+            <p>Start date: <?php echo date('d-m-Y', strtotime($event['Event_Date'])); ?></p>
+            <p>Start time: <?php echo $event['Event_Time']; ?></p>
             <?php 
 			//Full address to be used in the google maps api
 			$full_address = $event['Address'] . ", " . $event['Postcode'] . ", " .$event['Country'];
-			if ($event['regis_statues'] == 'Open' &&  $account_type == "member") {?>
-            <a href="#" title=""><span>Register</span></a>
-            <?php } ?>
-            <a href="Account.php" title=""><span>Return to Account</span></a>
-        <?php } else { ?>
-        	<p> You currently have no events assigned to you. Please contact one of the planners.</p>
+			
+			
+			echo "<a href='Account.php'><span>Return to Account</span></a>";
+			
+			//members features - to register to event
+			if ($event['regis_statues'] == 'Open' &&  $account_type == "member") {
+            	echo "<p> <a href='Event_Registration.php'><span>Register</span></a> </p>";
+            }
+			if ($account_type == "member") {
+            	echo "<p> <a href='stop_attending.php'><span>Stop Attending</span></a> </p> ";
+            }
+        } else {
+        	echo "<p> You currently have no events assigned to you. Please contact one of the planners.</p>";
         
-        <?php } ?>
+        } ?>
   </div>
   <div class="RightBody">
        	  
 		  <p>
 		  <?php if($account_type == 'planner'){?>
-          <a href="#" title=""><span> Edit Event</span></a>
+          <a href="Edit_Event.php" title=""><span> Edit Event</span></a>
           &nbsp;
           <a href="stop_planning.php" title=""><span> Stop Planning</span></a>
           <?php } ?>

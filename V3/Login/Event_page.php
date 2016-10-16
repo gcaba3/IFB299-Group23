@@ -66,6 +66,7 @@ if($event_id != 0){
 		//Checks if the error message is flagged true. If not then it loads in the required information for the page. If it is it displayes the error message.
 		if($error_message == FALSE) { ?>
             <h1><?php echo ucfirst($event['Event_Name']); ?></h1>
+            <p>Event ID: <?php echo $event['Event_ID']; ?></p>
             <p>Country: <?php echo ucfirst($event['Country']); ?></p>
             <p>State: <?php echo ucfirst($event['State']); ?></p>
             <p>Postcode: <?php echo ucfirst($event['Postcode']); ?> </p>

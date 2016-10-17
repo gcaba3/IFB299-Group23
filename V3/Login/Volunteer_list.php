@@ -34,7 +34,7 @@ if(isset($_POST['save'])){
 	$Updated = TRUE;
 } elseif(isset($_POST['add_new'])){
 	//Open new register new volunteer page
-	header('Location: new_volunteer.php');
+	header('Location: Add_new_volunteer.php');
 }
 ?>
 <!doctype html>
@@ -85,7 +85,7 @@ if(isset($_POST['save'])){
 		while($volunteer = mysqli_fetch_array($v_result)){
 			echo "<tr>";
 			echo '<td style="text-align:center;">' . $volunteer['ID'] . '</td>';
-			echo '<td style="text-align:center;">' . $volunteer['FirstName'] . $volunteer['LastName'] . '</td>';
+			echo '<td style="text-align:center;">' . $volunteer['FirstName'] . ' ' . $volunteer['LastName'] . '</td>';
 			?>
             
              <!--A drop down box with the all the available events loaded as options. 
@@ -95,7 +95,7 @@ if(isset($_POST['save'])){
             
             <!--Load the already existing event if it is set. If not then set the first option to none-->
             	<?php if(isset($volunteer['Event_ID'])){?>
-					<option value = <?php echo $volunteer['Event_ID']; ?> > <?php echo $volunteer['Event_ID']; ?></option>
+					<option value = <?php echo $volunteer['Event_ID']; ?> > <?php echo $volunteer['Event_ID']; ?> </option>
                     <option value = 0 > None</option>
 				<?php } else { ?>
                 	<option value = 0 > None</option>

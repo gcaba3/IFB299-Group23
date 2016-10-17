@@ -54,7 +54,7 @@ if($event_id != 0){
                 <?php } elseif ($account_type == "volunteer") {?>
                 <ul>
                     <li><a href="Account.php" title=""><span>Account</span></a></li>
-                    <li><a href="Volunteers_Event.php" title=""><span>Event</span></a></li>
+                    <li><a href="Event_page.php" title=""><span>Event</span></a></li>
                     <li><a href="Planners.php" title=""><span>Planners</span></a></li>
                 </ul>
                 <?php } ?>
@@ -109,6 +109,7 @@ if($event_id != 0){
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBj8rAAP7pg_CUMypAErvj3Eb8hjsJDsTg
                 &q=<?php echo urlencode($full_address); ?>">
         </iframe>
+        <!---Planner table under map--->
    	    <table style="width:100%" border="0"> 
         <tr>
         <th width="150">Planner</th>
@@ -133,7 +134,7 @@ if($event_id != 0){
 			//Then fill in the table with each row.
 			$row = mysqli_fetch_array($p_result);
 			echo "<tr>";
-			echo '<td style="text-align:center;">' . $row['FirstName'] . $row['LastName'] . '</td>';
+			echo '<td style="text-align:center;">' . $row['FirstName'] . ' ' .$row['LastName'] . '</td>';
 			echo '<td style="text-align:left;">' . $row['Email'] . '</td>';
 		}
 		?>

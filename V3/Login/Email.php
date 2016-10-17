@@ -47,7 +47,7 @@ function email_volunteers(){
 	global $event_ID;
 	
 	//if its not about a specific event it pulls all volunteer's emails
-	// if it is it pulls only the volunteer's emails assigned to that event
+	// if it is it pulls only the volunteers emails assigned to that event
 	if($event_ID == ""){
 		$sql = "select Email from volunteer";
 	} else {
@@ -66,7 +66,7 @@ function email_planners(){
 	global $event_ID;
 	
 	//if its not about a specific event it pulls all the planners emails.
-	//if it is about a specific event that only planners involved in that event is pulled
+	//if it is about a specific event then only planners involved in that event is pulled
 	if($event_ID == ""){
 		//sql - pull all the emails from the planners table
 		$sql = "select Email from planner";
@@ -127,7 +127,7 @@ if(isset($_POST['fill'])){
 // then it will send the email with the text areas as the inputs of the email
 } elseif(isset($_POST['send'])){
 	//checks if the recipient text area is empty.
-	//if it s flag the error.
+	//if it is flag the error.
 	// if its not setup and send the email
 	if(!empty($_POST['recipient'])){
 		$recipient_emails = $_POST['recipient']; // store all the text in the recipient text area as recipients email

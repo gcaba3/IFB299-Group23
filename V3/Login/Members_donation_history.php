@@ -21,26 +21,6 @@ function event_name($event_id){
 	return $event_name;
 }
 
-//returns the date of the latest donation made to the event by the sponsor
-function date_last_donated($memberID, $eventID){
-	global $con;
-	
-	$sql = "select * from members_donation WHERE member_ID = '$memberID' and Event_ID = '$eventID' order by Date DESC limit 1";
-	$result = mysqli_query($con, $sql);
-	$row = mysqli_fetch_assoc($result);
-	return date('d-m-Y', strtotime($row['Date']));
-}
-
-//returns the sum of the mumbers donation made to one event
-function total_donations($memberID, $eventID){
-	global $con;
-	
-	$sql = "select SUM(amount) AS total_donations from members_donation WHERE member_ID = '$memberID' and Event_ID = '$eventID'";
-	$result = mysqli_query($con, $sql);
-	$row = mysqli_fetch_assoc($result);
-	return $row['total_donations'];
-}
-
 if(isset($_POST['add_new'])){
 	header('Location: New_donation.php');
 } else if(isset($_POST['donationhistory'])){
@@ -71,34 +51,36 @@ if(isset($_POST['add_new'])){
             </div>
         </div>
         <div class="FullBody" style="text-align:center">
-        <h1>Donation Summary</h1>
+        <h1>Donation History</h1>
         <table style="width:100%" border="0"> 
         <tr>
+        <th width="150">Donation ID</th>
         <th width="290">Event ID</th>
         <th width="290">Event Name</th>
         <th width="290">Amount</th>
-        <th width="290">Last Donation Made</th>
+        <th width="290">Date</th>
         </tr>
         <?php
 		//sql - select all the donations for the members id
-		$sql = "select * from members_donation where member_ID = '$idnumber' GROUP BY Event_ID ORDER BY Date";
+		$sql = "select * from members_donation where member_ID = '$idnumber' ORDER BY Date DESC";
 		$result = mysqli_query($con, $sql);
 		
-		while($row = mysqli_fetch_array($result)){
-			//Set the event name for the current event id
+		while($row = mysqli_fetch_array($result)){	
 			echo '<tr>';
+			echo '<td style="text-align:center;">' . $row['ID'] . '</td>';
 			echo '<td style="text-align:center;">' . $row['Event_ID'] . '</td>';
 			echo '<td style="text-align:center;">' . event_name($row['Event_ID']) . '</td>';
-			echo '<td style="text-align:center;">' . '$'.total_donations($idnumber,$row['Event_ID']) . '</td>';
-			echo '<td style="text-align:center;">' . date_last_donated($idnumber,$row['Event_ID']) . '</td>';
+			echo '<td style="text-align:center;">' . '$'.$row['Amount'] . '</td>';
+			echo '<td style="text-align:center;">' . date('d-m-Y', strtotime($row['Date'])) . '</td>';
 		}
 		?>
         </table>
         <div style="text-align:center">
             <form action = "" method= "post">
                 <p><input  type="submit" name="add_new" id="add_new" value="Add New"></p>
-                <p><input  type="submit" name="donationhistory" id="donationhistory" value="View Donation History"></p>
             </form>
+            
+        <p><a href="Donations.php"> Return </a></p>
         </div>
         
         </div>

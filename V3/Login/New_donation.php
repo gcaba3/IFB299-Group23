@@ -148,8 +148,7 @@ if(isset($_POST['confirm'])){
             </select>
             <?php
 			
-			//checks if the error message is true. 
-			//If it is it shows the user the minimum donation amount.
+			//A bunch of code that checks which message(s) to output.
 			if($error_message == TRUE){
 				echo '<p>';
 				echo 'Because you reserved: ' . $reserved_tickets . ' tickets to ' . event_name($chosen_event);

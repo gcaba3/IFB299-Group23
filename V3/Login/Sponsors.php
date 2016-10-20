@@ -2,41 +2,40 @@
 <?php
 session_start();
 
-//Set variables
-$accountnumber = $_SESSION['ACCOUNTNUMBER'];
-$account_type = $_SESSION['ACCOUNTTYPE'];
-$username = $_SESSION['USERNAME'];
-
-
-
-//check if save button is set
-if(isset($_POST['save'])){
-	// Set query, to select everything from the volunteers table
-	$sql_sponsor = "select * FROM Sponsors";
-	$v_result = mysqli_query($con, $sql_sponsor);
-	$total_rows = mysqli_num_rows($v_result); 
+//return the event name of the given event id
+function event_name($event_id){
+	global $con;
+	$event_name = "";
 	
-	//Cycle through all the possible rows. Use each iteration as the volunteers id.
-	for($int = 1; $int <= $total_rows; $int++){
-		$sponsor_ID = $int;
-		$sponsor_ID = $_POST[$int];
-		
-		//Checks if the event to that volunteers event entry is set (0). if it is update the event column as null
-		// if not then update the event column as the selected data from the list.
-		if($sponsor_ID == 0){
-			$sponsor_ID = NULL;
-			$sql_assign_event = "UPDATE sponsor SET Event_ID = NULL WHERE ID = '$sponsor_ID'";
-			mysqli_query($con, $sql_assign_event);
-		} else {
-			$sql_assign_event = "UPDATE sponsor SET Event_ID = '$event_ID' WHERE ID = 'sponsor_ID'";
-			mysqli_query($con, $sql_assign_event);
-		}
+	$sql = "SELECT Event_Name from event where Event_ID = '$event_id'";
+	$result = mysqli_query($con,$sql);
+	$row = mysqli_fetch_assoc($result);
+	$event_name = $row['Event_Name'];
+	
+	return $event_name;
+}
+
+//function return the name of the last event the sponsor donated to
+function latest_event($sponsorid){
+	global $con;
+	
+	$sql = "select * from sponsors_donation where Sponsor_ID = '$sponsorid' ORDER BY date_donated DESC limit 1";
+	$result = mysqli_query($con,$sql);
+	$row = mysqli_fetch_assoc($result);
+	
+	return event_name($row['event_ID']);
+}
+
+if(isset($_POST['submit'])){
+	if(isset($_POST['id'])){
+		$_SESSION['SPONSORID'] = $_POST['id'];
+		header ("Location: Sponsor_account.php");
 	}
-	$Updated = TRUE;
-} elseif(isset($_POST['add_new'])){
-	//Open new register new volunteer page
+} else if(isset($_POST['addnew'])){
 	header('Location: Add_new_sponsor.php');
 }
+
+
 ?>
 <!doctype html>
 <html>
@@ -44,7 +43,7 @@ if(isset($_POST['save'])){
 <link href="css/Master.css" rel="stylesheet" type="text/css" />
 <link href="css/Menu.css" rel="stylesheet" type="text/css" />
 <meta charset="utf-8">
-<title>Sponsors</title>
+<title>Sponsors </title>
 </head>
 
 <body>
@@ -52,9 +51,9 @@ if(isset($_POST['save'])){
     	<div align="center" class="Header"></div>
         <div class="Menu">
             <div id="tabs31">
-                <ul>
+            	<ul>
                     <li><a href="Account.php" title=""><span>Account</span></a></li>
-                    <li><a href="Event_page.php" title=""><span>Events</span></a></li>
+                    <li><a href="Planners_Events.php" title=""><span>Events</span></a></li>
                     <li><a href="Volunteer_list.php" title=""><span>Volunteers</span></a></li>
                     <li><a href="Finances.php" title=""><span>Finances</span></a></li>
                     <li><a href="Sponsors.php" title=""><span>Sponsors</span></a></li>
@@ -62,40 +61,44 @@ if(isset($_POST['save'])){
                 </ul>
             </div>
         </div>
-        <div class="FullBody">
-       <table width="100%" border="0" cellpadding="6">
-       <tr>
-        <th width="150">Sponsor ID</th>
-        <th width="290">Sponsor Name</th>
-        <th width="290">Email</th>
-        <th width="290">Event Sponsoring</th>
-        </tr>
-        <?php
-		//set query - select everything from sponsor table
-		$sql_sponsor = "select * FROM sponsors";
-		$v_result = mysqli_query($con, $sql_sponsor);
-		
-		//Select everything from the volunteers table. Then fill html table as necessary
-		while($sponsor = mysqli_fetch_array($v_result)){
-			echo "<tr>";
-			echo '<td style="text-align:center;">' . $sponsor['Sponsor_ID'] . '</td>';
-			echo '<td style="text-align:center;">' . $sponsor['Sponsor_Name'] . ' ' . '</td>';
-			echo '<td style="text-align:center;">' . $sponsor['Email'] . ' ' . '</td>';
-		}
-		?>
-      
-       </table>
-       
-          
-       <div class= "Footer">
-       <input type="button" onClick="location.href='Add_New_Sponsor.php'">
-     
-       
-       
-       </div> 
-       
-  </div>
-        
+        <div class="FullBody" >
+            <table style="width:100%;" border="0">
+            <tr>
+            <td> Sponsor ID </td>
+            <td> Sponsor Name </td>
+            <td> Email </td>
+            <td> Latest Event Sponsoring </td>
+            <td> View </td>
+            
+           	<?php
+			$sql = "select * from sponsors";
+			$result = mysqli_query($con, $sql);
+			
+			while ($row = mysqli_fetch_array($result)){
+				echo '<tr>';
+				echo '<td>'. $row['Sponsor_ID'] .'</td>';
+				echo '<td>'. $row['Sponsor_Name'] .'</td>';
+				echo '<td>'. $row['Email'] .'</td>';
+				echo '<td>'. latest_event($row['Sponsor_ID']) .'</td>';
+				echo '<td>';
+				?>
+                <form  action="" method="post"> 
+                 <!-- Set the current event's id as the hidden input of the view button-->
+                <input type="hidden" name="id" value = <?php echo $row['Sponsor_ID'];?>>
+                <input type="submit" value="View" name="submit" id="submit">
+                </form>
+				<?php
+                echo '</td>';
+			}
+			?>            
+            </table>
+            
+            <!---Add new Button-->
+            <form  action="" method="post" style="text-align:center;"> 
+            	<input type="submit" value="Add New Sponsor" name="addnew" id="addnew">
+            </form>
+            
+        </div>
 </div>
 </body>
 </html>

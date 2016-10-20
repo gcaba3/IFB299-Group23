@@ -70,7 +70,7 @@ function num_members_that_donated($event_ID){
 	global $con;
 	
 	// Set query - select the registration statues of the event
-	$sql = "select * FROM members_donation WHERE Event_ID = '$event_ID'";
+	$sql = "select * FROM members_donation WHERE Event_ID = '$event_ID' GROUP BY member_ID";
 	$result = mysqli_query($con, $sql);
 	$members_that_donated = mysqli_num_rows($result);
 	return $members_that_donated;

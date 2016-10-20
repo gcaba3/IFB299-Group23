@@ -8,14 +8,27 @@ $account_type = $_SESSION['ACCOUNTTYPE'];
 $username = $_SESSION['USERNAME'];
 $Updated = FALSE;
 
+//return the event name of the given event id
+function event_name($event_id){
+	global $con;
+	$event_name = "";
+	
+	$sql = "SELECT Event_Name from event where Event_ID = '$event_id'";
+	$result = mysqli_query($con,$sql);
+	$row = mysqli_fetch_assoc($result);
+	$event_name = $row['Event_Name'];
+	
+	return $event_name;
+}
+
 //check if save button is set
 if(isset($_POST['save'])){
-	// Set query, to select everything from the volunteers table
+	// Set query - to select all the volunteers from the volunteers table
 	$sql_volunteer = "select * FROM volunteer";
 	$v_result = mysqli_query($con, $sql_volunteer);
-	$total_rows = mysqli_num_rows($v_result); 
+	$total_rows = mysqli_num_rows($v_result); // total number of volunteers
 	
-	//Cycle through all the possible rows. Use each iteration as the volunteers id.
+	//Cycle through all the volunteers. Use each for-iteration as the volunteer's id.
 	for($int = 1; $int <= $total_rows; $int++){
 		$volunteer_ID = $int;
 		$event_ID = $_POST[$int];
@@ -62,11 +75,14 @@ if(isset($_POST['save'])){
             </div>
         </div>
         <div class="FullBody">
-        <?php
-		if($Updated == TRUE){
-			echo "Successfully Updated";
-		}
-		?>
+            <div style="text-align:center">
+                <?php
+                if($Updated == TRUE){
+                    echo "Successfully Updated";
+                }
+                ?>
+            </div>
+            
         <table style="width:100%" border="0"> 
         <tr>
         <th width="150">ID</th>
@@ -93,28 +109,32 @@ if(isset($_POST['save'])){
 			<td style="text-align:center;">
             <select name=<?php echo $volunteer['ID'] ?> form="assign_event">
             
-            <!--Load the already existing event if it is set. If not then set the first option to none-->
-            	<?php if(isset($volunteer['Event_ID'])){?>
-					<option value = <?php echo $volunteer['Event_ID']; ?> > <?php echo $volunteer['Event_ID']; ?> </option>
-                    <option value = 0 > None</option>
-				<?php } else { ?>
-                	<option value = 0 > None</option>
-                <?php } ?>
-            	
-            	<?php
-				// Set query - to select the all the events that are open
-					$sql_events = "select Event_ID FROM event where regis_statues= 'Open'";
-					$e_result = mysqli_query($con, $sql_events);
-					
-					//cycle through all the events from the result. 
-					while($event = mysqli_fetch_assoc($e_result)){
-						//set the events id as a local variable. Then set that as an option in the drop down box.
-						$event_id = $event['Event_ID'];
-						?> 
-						<option value=<?php echo $event_id ?>> <?php echo $event_id ?></option>
-						<?php
+            <?php
+			//sql query to return all open events
+			$sql_open_events = "SELECT * from event where regis_statues = 'Open'";
+			$result_oe = mysqli_query($con,$sql_open_events);
+			
+			/*
+			checks if the current volunteer is assigned an event.
+			If it is it sets that event as the first option. Then load all the other open events after.
+			If its not then load the first option as none. Then load all the other open events after.
+			*/
+            if(isset($volunteer['Event_ID'])){
+				echo "<option value=".$volunteer['Event_ID'].">". event_name($volunteer['Event_ID'])."</option>";
+				while($event = mysqli_fetch_array($result_oe)){
+					if ($volunteer['Event_ID'] != $event['Event_ID']){
+						echo "<option value=".$event['Event_ID'].">". event_name($event['Event_ID'])."</option>";
 					}
-				?>
+				}
+				echo "<option value=".'0'.">". 'None' ."</option>";
+			} else {
+				echo "<option value=".'0'.">". 'None' ."</option>";
+				while($event = mysqli_fetch_array($result_oe)){
+					echo "<option value=".$event['Event_ID'].">". event_name($event['Event_ID'])."</option>";
+				}
+			}
+				
+			?>
             </select>
             </td>
 			<?php
@@ -124,12 +144,14 @@ if(isset($_POST['save'])){
 		}
 		?>
         </table>
-   		
-        <!--The form to submit the input from the page-->
-        <form action = "" method= "post" id="assign_event">
-        	<input type="submit" value = "Save" name="save" id="save" style="margin-top:10px; margin-left:50px;">
-        	<input type="submit" name="add_new" id="add_new" value="Add new">
-        </form>
+   		<div style="text-align:center">
+            <!--The form to submit the input from the page-->
+            <form action = "" method= "post" id="assign_event">
+                <input type="submit" value = "Save" name="save" id="save" style="margin-top:10px; margin-left:50px;">
+                &nbsp
+                <input type="submit" name="add_new" id="add_new" value="Add new">
+            </form>
+        </div>
   </div>
 </div>
 </body>

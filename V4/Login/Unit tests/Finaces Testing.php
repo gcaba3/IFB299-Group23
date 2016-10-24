@@ -257,21 +257,111 @@ echo 'Test Result: '. $test->passorfail($test->expected_value,$test->output) . '
 
 
 /*
+Test case: tests total_members_attending function
+This function returns a number of all members attending of the given event id
+
+Input derived from localhost database of event id 1:
+
+EventID			Id nunmber			Rserved tickets
+1				1					5
+1				2					5
+1				3					5
+
+Expected value: 3
 
 */
 
 $test = new Test;
 $eventid = 1;
 
-$test->testname = 'Rough Cost';
+$test->testname = 'Total Members Attending';
 echo 'Testcase: ' . $test->testname . '<br>' . '<br>';
-
-$test->expected_value = 300;
-$test->output = $test->calc_rough_cost($eventid);
+$test->expected_value = 3;
+$test->output = $test->total_members_attending($eventid);
 echo 'Expected Value: ' .  $test->expected_value . '<br>';
 echo 'Function Output: '. $test->output. '<br>';
 
 echo 'Test Result: '. $test->passorfail($test->expected_value,$test->output) . '<br>' . '<br>';
 
+/*
+Test case: tests num_members_that_donated function
+This function returns a number of all the members that donated to the given event id
 
+Input derived from localhost database of event id 1:
+
+Event_ID		Member_ID			Amount
+1				1					100
+1				2					100
+1				1					5
+1				1					10
+
+Expected value: 2
+
+*/
+
+$test = new Test;
+$eventid = 1;
+
+$test->testname = 'Number of members that donated';
+echo 'Testcase: ' . $test->testname . '<br>' . '<br>';
+$test->expected_value = 2;
+$test->output = $test->num_members_that_donated($eventid);
+echo 'Expected Value: ' .  $test->expected_value . '<br>';
+echo 'Function Output: '. $test->output. '<br>';
+
+echo 'Test Result: '. $test->passorfail($test->expected_value,$test->output) . '<br>' . '<br>';
+
+/*
+Test case: tests calc_ticket_cost function
+This function returns the calculated ticket price from three inputs ($final_cost, $total_members_attending, $members_that_donated)
+
+Input (based from previous tests):
+$final_cost = -43;
+$total_members_attending = 3;
+$members_that_donated = 2;
+
+Expected value: -43
+
+*/
+
+$test = new Test;
+$final_cost = -43;
+$total_members_attending = 3;
+$members_that_donated = 2;
+
+$test->testname = 'Calculate ticket prices';
+echo 'Testcase: ' . $test->testname . '<br>' . '<br>';
+$test->expected_value = -43;
+$test->output = $test->calc_ticket_cost($final_cost,$total_members_attending,$members_that_donated);
+echo 'Expected Value: ' .  $test->expected_value . '<br>';
+echo 'Function Output: '. $test->output. '<br>';
+
+echo 'Test Result: '. $test->passorfail($test->expected_value,$test->output) . '<br>' . '<br>';
+
+/*
+Test case: tests calc_ticket_cost function
+This function returns the calculated ticket price from three inputs ($final_cost, $total_members_attending, $members_that_donated)
+
+Input (Random numbers with positive output):
+$final_cost = 500;
+$total_members_attending = 10;
+$members_that_donated = 5;
+
+Expected value: 100
+
+*/
+
+$test = new Test;
+$final_cost = 500;
+$total_members_attending = 10;
+$members_that_donated = 5;
+
+$test->testname = 'Calculate ticket prices';
+echo 'Testcase: ' . $test->testname . '<br>' . '<br>';
+$test->expected_value = 100;
+$test->output = $test->calc_ticket_cost($final_cost,$total_members_attending,$members_that_donated);
+echo 'Expected Value: ' .  $test->expected_value . '<br>';
+echo 'Function Output: '. $test->output. '<br>';
+
+echo 'Test Result: '. $test->passorfail($test->expected_value,$test->output) . '<br>' . '<br>';
 ?>

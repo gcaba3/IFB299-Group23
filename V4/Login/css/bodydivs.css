@@ -1,0 +1,20 @@
+/* CSS Document */
+
+.LeftBody{
+	margin-top:0px;
+	width:350px;
+	float:left;
+	height:500px;		
+}
+.RightBody{
+	width:450px;
+	float:right;
+	height:auto;	
+}
+.FullBody{
+	margin-top:0px;
+	width:800px;
+	float:left;
+	height:500px;		
+}
+.Footer {height:100px; }

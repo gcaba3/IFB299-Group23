@@ -1,0 +1,51 @@
+html {
+	height:100%	
+	
+}
+
+body {
+	height:100%;
+	margin:0px;
+	padding:0px;
+	background: linear-gradient(to bottom right, rgba(74,145,190,1.00), white);
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+
+.Container { 
+width:800px; 
+height:auto; 
+clear:both; 
+overflow:auto; 
+margin-top:0px;
+margin-left:auto;
+margin-right:auto;
+background-color:#FFFFFF; 
+}
+
+.Header {height:100px; 
+background-color:rgba(243,228,25,1.00);
+background-image:url(../images/logo.png);
+background-size:auto 100%;
+background-repeat:no-repeat;
+}
+
+.Menu {height:50px;}
+.LeftBody{
+	margin-top:0px;
+	width:350px;
+	float:left;
+	height:400px;		
+}
+.RightBody{
+	width:450px;
+	float:right;
+	height:auto;	
+}
+.FullBody{
+	margin-top:0px;
+	width:800px;
+	float:left;
+	height:400px;		
+}
+.Footer {height:100px; }

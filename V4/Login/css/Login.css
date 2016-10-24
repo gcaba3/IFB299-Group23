@@ -1,0 +1,23 @@
+html {
+	height:100%	
+	
+}
+
+body {
+	height:100%;
+	margin:0px;
+	padding:0px;
+	background: linear-gradient(to bottom right, rgba(74,145,190,1.00), white);
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+.Login{	
+	position:relative;
+	width: 250px;
+	margin: 50px auto;
+	margin-top:70px;
+	padding:10px 40px 25px;
+	background-color:rgba(255,255,255,1.00);
+	border-radius:10px;
+	border:2px solid #ccc;
+}

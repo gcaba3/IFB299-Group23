@@ -1,0 +1,37 @@
+Link to website
+http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com/
+
+Access to new features 
+Click on log in. Use one of the following credentials to see different features on different accounts.
+
+First row - account type
+second - username
+third - password
+
+member
+member
+qwe
+
+planner
+planner
+asd
+
+volunteer
+volunteer
+zxc
+
+planner
+secondplanner
+rty
+
+volunteer
+secondvolunteer
+zxc
+
+member
+Secondguy
+qwe
+
+member
+new
+qwe

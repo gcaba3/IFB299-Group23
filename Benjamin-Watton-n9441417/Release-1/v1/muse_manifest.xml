@@ -1,0 +1,53 @@
+<manifest alg="2" build="2015.2.1.352" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="https://d1gct4q93oyoq9.cloudfront.net" resolutions="1x" timestamp="1472458163640">
+  <folder name="css">
+    <file name="site_global.css" crc="519376845"/>
+    <file name="master_a-master.css" crc="514318101" ref="donations:index:login:blank-event:donate:events:blank-database-form:admin-account:dinner:contact-us:show:user-account:faq:volunteering"/>
+    <file name="donations.css" crc="332576543" ref="donations"/>
+    <file name="index.css" crc="4158935283" ref="index"/>
+    <file name="login.css" crc="332576543" ref="login"/>
+    <file name="blank-event.css" crc="332576543" ref="blank-event"/>
+    <file name="donate.css" crc="332576543" ref="donate"/>
+    <file name="events.css" crc="332576543" ref="events"/>
+    <file name="blank-database-form.css" crc="332576543" ref="blank-database-form"/>
+    <file name="admin-account.css" crc="332576543" ref="admin-account"/>
+    <file name="dinner.css" crc="332576543" ref="dinner"/>
+    <file name="contact-us.css" crc="332576543" ref="contact-us"/>
+    <file name="show.css" crc="332576543" ref="show"/>
+    <file name="user-account.css" crc="332576543" ref="user-account"/>
+    <file name="faq.css" crc="332576543" ref="faq"/>
+    <file name="volunteering.css" crc="332576543" ref="volunteering"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="169078940" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="museutils.js" crc="3851988764" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="whatinput.js" crc="86476730" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="museconfig.js" crc="169177150" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="pie.js" crc="3831537696" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="jquery.musemenu.js" crc="4150485998" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="271560940" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="jquery.watch.js" crc="3842844514" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="require.js" crc="4108833657" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+  </folder>
+  <folder name="images">
+    <file name="u107-grad.png" crc="4292119461" ref="index"/>
+    <file name="logo.png" crc="4180727026" seo="true" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+    <file name="arrowmenudown.png" crc="345214036" ref="index"/>
+    <file name="istock_000022123478_medium.jpg" crc="4233723034" seo="true" ref="index"/>
+    <file name="whitebrickwall.jpg" crc="281033849" ref="index:login:events:dinner:show:user-account:volunteering:donations:donate:admin-account:faq:contact-us:blank-event:blank-database-form"/>
+  </folder>
+  <file name="index.html" crc="3905812591" seo="true" mt="1472457118906" redirect="true"/>
+  <file name="login.html" crc="104405711" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="events.html" crc="4210860792" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="dinner.html" crc="4161777658" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="show.html" crc="4269372343" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="user-account.html" crc="206024232" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="volunteering.html" crc="238945046" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="donations.html" crc="3811161148" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="donate.html" crc="520241921" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="admin-account.html" crc="4157219118" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="faq.html" crc="385298658" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="contact-us.html" crc="51163398" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="blank-event.html" crc="3786170702" seo="true" mt="1472456580548" redirect="true"/>
+  <file name="blank-database-form.html" crc="489646579" seo="true" mt="1472456580548" redirect="true"/>
+</manifest>

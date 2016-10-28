@@ -1,0 +1,51 @@
+<manifest alg="2" build="2015.2.1.352" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="http://ec2-52-43-249-215.us-west-2.compute.amazonaws.com" resolutions="1x" timestamp="1476750313314">
+  <folder name="css">
+    <file name="site_global.css" crc="241806178"/>
+    <file name="master_a-master.css" crc="4160090698" ref="contact:dinner:faq:index:show:login:events:donate"/>
+    <file name="contact.css" crc="80048005" ref="contact"/>
+    <file name="dinner.css" crc="261499204" ref="dinner"/>
+    <file name="faq.css" crc="4268844657" ref="faq"/>
+    <file name="index.css" crc="74646006" ref="index"/>
+    <file name="show.css" crc="3939835413" ref="show"/>
+    <file name="login.css" crc="80048005" ref="login"/>
+    <file name="events.css" crc="510948091" ref="events"/>
+    <file name="donate.css" crc="80048005" ref="donate"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="169078940" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="museutils.js" crc="3851988764" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="whatinput.js" crc="86476730" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="museconfig.js" crc="169177150" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="pie.js" crc="3831537696" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="jquery.musemenu.js" crc="4150485998" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="271560940" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="jquery.watch.js" crc="3842844514" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="require.js" crc="4108833657" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="webpro.js" crc="4067903014" ref="events:dinner:show"/>
+    <file name="musewpdisclosure.js" crc="338211507" ref="events"/>
+    <file name="musewpslideshow.js" crc="4265225696" ref="dinner:show"/>
+    <file name="jquery.museoverlay.js" crc="4075157096" ref="dinner:show"/>
+    <file name="touchswipe.js" crc="474750357" ref="dinner:show"/>
+  </folder>
+  <folder name="images">
+    <file name="u107-grad.png" crc="4292119461" ref="index:login"/>
+    <file name="logo.png" crc="4180727026" seo="true" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="arrowmenudown.png" crc="345214036" ref="index:login"/>
+    <file name="istock_000022123478_medium.jpg" crc="4233723034" seo="true" ref="index"/>
+    <file name="whitebrickwall.jpg" crc="281033849" ref="index:login:events:dinner:show:donate:faq:contact"/>
+    <file name="adds1.jpg" crc="3802105904" seo="true" ref="dinner:show"/>
+    <file name="blank.gif" crc="4208392903" ref="dinner:show"/>
+    <file name="adds2.jpg" crc="4177812691" seo="true" ref="dinner:show"/>
+    <file name="adds3.jpg" crc="530956457" seo="true" ref="dinner:show"/>
+    <file name="loading.gif" crc="3815509949" ref="dinner:show"/>
+  </folder>
+  <file name="index.html" crc="529985477" seo="true" mt="1476750104011" redirect="true"/>
+  <file name="login.html" crc="11340024" seo="true" mt="1476750303631" redirect="true"/>
+  <file name="events.html" crc="4274447635" seo="true" mt="1476750217878" redirect="true"/>
+  <file name="dinner.html" crc="355381407" seo="true" mt="1476750104011" redirect="true"/>
+  <file name="show.html" crc="3908436229" seo="true" mt="1476750104011" redirect="true"/>
+  <file name="donate.html" crc="163300929" seo="true" mt="1476750167442" redirect="true"/>
+  <file name="faq.html" crc="4175551073" seo="true" mt="1476750104011" redirect="true"/>
+  <file name="contact.html" crc="86402430" seo="true" mt="1476750104011" redirect="true"/>
+</manifest>

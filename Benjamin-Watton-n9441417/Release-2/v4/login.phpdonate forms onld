@@ -1,0 +1,24 @@
+	<form action = "newuser.php" method="post">
+Name: <input type="string" name="name"><br>
+E-mail: <input type="string" name="email"><br>
+Password: <input type="string" name="Password"><br>
+Address 1 : <input type="string" name="Address1"><br>
+Address 2: <input type="string" name="Address2"><br>
+City: <input type="string" name="City"><br>
+Country: <input type="string" name="Country"><br>
+Postcode: <input type="string" name="Postcode"><br>
+Phone: <input type="string" name="Phone"><br>
+<input type="submit">
+</form>
+
+
+		</p>
+
+     <p id="u2912-32">Already have An Ancount? </p>
+	 <br/>
+	  <form action = "loginauth.php" method="post">
+	Name: <input type="string" name="name"><br>
+	E-mail: <input type="string" name="email"><br>
+	Password: <input type="string" name="Password"><br>
+		<input type="submit">
+		</form>
